@@ -1,10 +1,9 @@
-import java.util.Scanner; //import Statement
+import java.util.Scanner;
 
 public class SURFACE_AREA_CYLINDER
 {
 	public static void main(String[]args)
 	{
-		//instantiate the new Scanner object "keyboard"
 		Scanner keyboard = new Scanner(System.in);
 		
 		double radius = 0.0;

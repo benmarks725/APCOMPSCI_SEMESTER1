@@ -1,10 +1,9 @@
-import java.util.Scanner; //import Statement
+import java.util.Scanner;
 
 public class BMICALCULATOR
 {
 	public static void main(String[]args)
 	{
-		//instantiate the new Scanner object "keyboard"
         Scanner keyboard = new Scanner(System.in);
 
         double weight = 0.0;
@@ -19,7 +18,7 @@ public class BMICALCULATOR
 
         bmi = ((weight * 703)/(height * height));
 
-        System.out.println("Your BMI is" + bmi);
+        System.out.println("Your BMI is " + bmi);
 
      }
 }
