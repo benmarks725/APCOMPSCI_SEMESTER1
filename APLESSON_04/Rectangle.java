@@ -1,18 +1,18 @@
 import java.util.Scanner;
 public class Rectangle
-	{
-		static double length;
-		static double width;
-		static double perimeter;
-	
+	{	
 		public static void main(String[]args)
 		{
-			Scanner inputs = new Scanner(System.in);
+			double length;
+			double width;
+			double perimeter;
+			
+			Scanner input = new Scanner(System.in);
 	
-			System.out.println("Please enter the length of the rectangle:");
-			length = inputs.nextDouble();
-			System.out.println("Please enter the width of the rectangle:");
-			width = inputs.nextDouble();
+			System.out.println("Enter the length of the rectangle:");
+			length = input.nextDouble();
+			System.out.println("Enter the width of the rectangle:");
+			width = input.nextDouble();
 			
 			print(calcPerim(length, width));
 		}

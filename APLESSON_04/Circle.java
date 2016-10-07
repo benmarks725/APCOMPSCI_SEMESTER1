@@ -1,17 +1,16 @@
 import java.util.Scanner;
 public class Circle
 	{
-		static double radius;
-		static double area;
-	
 		public static void main(String[]args)
 		{
+			double radius;
+			double area;
 			Scanner inputs = new Scanner(System.in);
 	
-			System.out.println("What is the radius of the circle?");
+			System.out.println("Enter the radius of the circle:");
 			radius = inputs.nextDouble();
 			
-			print(calcArea(radius));
+			print(calcArea(radius), radius);
 		}
 		
 		public static double calcArea(double r)
@@ -19,7 +18,7 @@ public class Circle
 			return 3.14159 * r * r;
 		}
 		
-		public static void print(double area)
+		public static void print(double area, double radius)
 		{
 			System.out.printf("The area of a circle with a radius of " + radius + " is %5.5f", area);
 		}

@@ -1,23 +1,24 @@
 import java.util.Scanner;
 public class Average
 	{
-		static double num1;
-		static double num2;
-		static double num3;
-		static double average;
+		
 	
 		public static void main(String[]args)
 		{
-			Scanner inputs = new Scanner(System.in);
+			double num1;
+			double num2;
+			double num3;
+			double average;
+			Scanner input = new Scanner(System.in);
 	
-			System.out.println("What is the first number?");
-			num1 = inputs.nextDouble();
-			System.out.println("What is the second number?");
-			num2 = inputs.nextDouble();
-			System.out.println("What is the third number?");
-			num3 = inputs.nextDouble();
+			System.out.println("Enter the first number");
+			num1 = input.nextDouble();
+			System.out.println("Enter the second number");
+			num2 = input.nextDouble();
+			System.out.println("Enter the third number");
+			num3 = input.nextDouble();
 			
-			print(calcAverage(num1, num2, num3));
+			print(calcAverage(num1, num2, num3), num1, num2, num3);
 		}
 		
 		public static double calcAverage(double n1, double n2, double n3)
@@ -25,7 +26,7 @@ public class Average
 			return (n1 + n2 + n3)/3;
 		}
 		
-		public static void print(double avg)
+		public static void print(double avg, double num1, double num2, double num3)
 		{
 			System.out.printf("The average of " + num1 + ", " + num2 + ", and " + num3 + " is %5.5f", avg);
 		}
