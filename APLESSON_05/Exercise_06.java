@@ -2,9 +2,44 @@ import java.util.Scanner;
 
 public class Exercise_06
 {
+	static String baby = "benmarks";
+	static String ohbaby = "robinetteisgod";
+	
 	public static void main(String[]args)
 	{
-		Scanner input = new Scanner(System.in);
+		passwordVerify();
+	}
+	
+	public static void passwordVerify()
+	{
+		Scanner kb = new Scanner(System.in);
+		System.out.println("What is the username?");
+		String kbUsername = kb.nextLine();
 		
+		System.out.println("What is the password?");
+		String kbPassword = kb.nextLine();
+		
+		if ((kbUsername.equals(baby)) && (kbPassword.equals(ohbaby)))
+		{
+			System.out.println("You are granted access!");
+		}
+		
+		if (!(kbUsername.equals(baby)) && (kbPassword.equals(ohbaby)))
+		{
+			System.out.println("Your username is incorrect.");
+			passwordVerify();
+		}
+		
+		if ((kbUsername.equals(baby)) && !(kbPassword.equals(ohbaby)))
+		{
+			System.out.println("Your password is incorrect.");
+			passwordVerify();
+		}
+		
+		if (!(kbUsername.equals(baby)) && !(kbPassword.equals(ohbaby)))
+		{
+			System.out.println("Your username and password are incorrect");
+			passwordVerify();
+		}
 	}
 }
