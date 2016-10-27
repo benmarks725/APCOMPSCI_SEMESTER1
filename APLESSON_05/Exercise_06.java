@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercise_06
 {
 	static String baby = "benmarks";
-	static String ohbaby = "robinetteisgod";
+	static String ohbaby = "robinette";
 	
 	public static void main(String[]args)
 	{
@@ -13,10 +13,10 @@ public class Exercise_06
 	public static void passwordVerify()
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("What is the username?");
+		System.out.println("Enter the username:");
 		String kbUsername = kb.nextLine();
 		
-		System.out.println("What is the password?");
+		System.out.println("Enter the password:");
 		String kbPassword = kb.nextLine();
 		
 		if ((kbUsername.equals(baby)) && (kbPassword.equals(ohbaby)))

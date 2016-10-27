@@ -5,55 +5,55 @@ public class Exercise_05
 	public static void main(String[]args)
 	{
 		Scanner input = new Scanner(System.in);
-		String Go = "";
-		String Look = "";
-		String Pantry = "";
-		String Eat = "";
+		String SD = "";
+		String NY = "";
+		String MI = "";
+		String CA = "";
 
 		System.out.println("Welcome to my adventure game \n");
-		System.out.println(" You are in a creepy house! Would you like to go 'upstairs' or into the 'kitchen'? ");
-		Go = input.next();
+		System.out.println(" You are in a random park. Would you like to SD 'inside' or 'stay outside'? ");
+		SD = input.next();
 
-		if (Go.equalsIgnoreCase("kitchen")) 
+		if (SD.equalsIgnoreCase("stay outside")) 
 		{
-		System.out.println("There is a long countertop with dirty dishes everywhere. Off to one side there is, as you'd expect, a refrigerator. You may open the 'refrigerator' or look in the 'pantry'. ");
+		System.out.println("There is a man with a clown mask on. Off to one side there is, as you'd not expect, a gun. You may pick up the 'gun' or flee the 'area'. ");
 		
-		Look = input.next();
+		NY = input.next();
 		}
 		
-		if (Look.equalsIgnoreCase("refrigerator")) 
+		if (NY.equalsIgnoreCase("gun")) 
 		{
-        System.out.println("Inside the refrigerator you see food and stuff. It looks pretty nasty. Would you like to eat some of the food, 'Yes' or 'No'?");
+        System.out.println("The clown is approaching very slowly. It looks pretty nasty. Would you like to defend yourself, 'Yes' or 'No'?");
         
-        Eat = input.next();
+        CA = input.next();
 		}
 		
-        if (Eat.equalsIgnoreCase("Yes")) 
+        if (CA.equalsIgnoreCase("Yes")) 
 		{
             System.out.println("  ");
             System.out.println("You live!");
 		}
 		
-		else if (Eat.equalsIgnoreCase("No")) 
+		else if (CA.equalsIgnoreCase("No")) 
 		{
             System.out.println("  ");
-            System.out.println("You die of starvation!");
+            System.out.println("The clown will take you away!");
         }
 		
-		else if (Look.equalsIgnoreCase("pantry")) 
+		else if (NY.equalsIgnoreCase("inside")) 
 		{
-        System.out.println("There is a killer inside. Do you want to 'fight' them, or 'run away'?");
+        System.out.println("There is a robber inside. Do you want to 'fight' them, or 'run away'?");
         
-        Pantry = input.next();
+        MI = input.next();
 		}
 		
-        if (Pantry.equalsIgnoreCase("fight")) 
+        if (MI.equalsIgnoreCase("fight")) 
 		{
             System.out.println("  ");
             System.out.println("You're weak and die");
         }
 		
-		else if (Pantry.equalsIgnoreCase("run away")) 
+		else if (MI.equalsIgnoreCase("run away")) 
 		{
             System.out.println("  ");
             System.out.println("You died because your too slow & can't run");
