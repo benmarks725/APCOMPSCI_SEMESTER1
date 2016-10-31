@@ -4,59 +4,62 @@ public class Exercise_05
 {
 	public static void main(String[]args)
 	{
-		Scanner input = new Scanner(System.in);
-		String SD = "";
-		String NY = "";
-		String MI = "";
-		String CA = "";
+		Scanner bm = new Scanner(System.in);
+		String run1 = "";
+		String inside1 = "";
+		String robber1 = "";
+		String clown1 = "";
 
 		System.out.println("Welcome to my adventure game \n");
-		System.out.println(" You are in a random park. Would you like to SD 'inside' or 'stay outside'? ");
-		SD = input.next();
+		System.out.println(" You are in a random park. Would you like to run 'inside' or 'stay outside'? ");
+		run1 = bm.nextLine();
 
-		if (SD.equalsIgnoreCase("stay outside")) 
+		if (run1.equalsIgnoreCase("stay outside")) 
 		{
-		System.out.println("There is a man with a clown mask on. Off to one side there is, as you'd not expect, a gun. You may pick up the 'gun' or flee the 'area'. ");
+			System.out.println("There is a man with a clown mask on. Off to one side there is, as you'd not expect, a gun. You may pick up the 'gun' or flee the 'area'. ");
 		
-		NY = input.next();
-		}
-		
-		if (NY.equalsIgnoreCase("gun")) 
-		{
-        System.out.println("The clown is approaching very slowly. It looks pretty nasty. Would you like to defend yourself, 'Yes' or 'No'?");
+			inside1 = bm.next();
+			
+			if (inside1.equalsIgnoreCase("gun")) 
+			{
+				System.out.println("The clown is approaching very slowly. It looks pretty nasty. Would you like to defend yourself, 'Yes' or 'No'?");
+     
+				clown1 = bm.next();
+				
+				if (clown1.equalsIgnoreCase("Yes")) 
+				{
+					System.out.println("  ");
+					System.out.println("You live!");
+				}
+				else if (clown1.equalsIgnoreCase("No")) 
+				{
+					System.out.println("  ");
+					System.out.println("The clown will take you away!");
+				}
+			}
+			else if (inside1.equalsIgnoreCase("area")) 
+			{
+				System.out.println("Congratulations you survived!");
         
-        CA = input.next();
+				clown1 = bm.next();
+			}
 		}
-		
-        if (CA.equalsIgnoreCase("Yes")) 
+		else if (run1.equalsIgnoreCase("inside")) 
 		{
-            System.out.println("  ");
-            System.out.println("You live!");
-		}
-		
-		else if (CA.equalsIgnoreCase("No")) 
-		{
-            System.out.println("  ");
-            System.out.println("The clown will take you away!");
-        }
-		
-		else if (NY.equalsIgnoreCase("inside")) 
-		{
-        System.out.println("There is a robber inside. Do you want to 'fight' them, or 'run away'?");
+			System.out.println("There is a robber inside. Do you want to 'fight' them, or 'run away'?");
         
-        MI = input.next();
+			robber1 = bm.nextLine();
+			
+			if (robber1.equalsIgnoreCase("fight")) 
+			{
+				System.out.println("  ");
+				System.out.println("You're weak and you will die");
+			}	
+			else if (robber1.equalsIgnoreCase("run away")) 
+			{
+				System.out.println("  ");
+				System.out.println("You died because your too slow & can't run");
+			}
 		}
-		
-        if (MI.equalsIgnoreCase("fight")) 
-		{
-            System.out.println("  ");
-            System.out.println("You're weak and die");
-        }
-		
-		else if (MI.equalsIgnoreCase("run away")) 
-		{
-            System.out.println("  ");
-            System.out.println("You died because your too slow & can't run");
-		}
-}
+	}
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.Scanner;
 
 public class Exercise_06
@@ -43,3 +44,5 @@ public class Exercise_06
 		}
 	}
 }
+=======
+>>>>>>> parent of 99ab973... Added Labs
