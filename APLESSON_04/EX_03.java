@@ -22,7 +22,7 @@ public class EX_03
       System.out.print("Enter the Time  "); 
       time = input.nextDouble();
 
-      compoundInterest = principal * Math.pow((1 + rate/100),time); 
+      compoundInterest = principal * Math.pow((1 + rate/100),time) / (time * 12); 
   
       System.out.println("");
       System.out.println("Your total monthly payment is  "+ compoundInterest);
