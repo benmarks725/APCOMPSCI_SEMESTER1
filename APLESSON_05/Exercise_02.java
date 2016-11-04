@@ -4,25 +4,25 @@ public class Exercise_02
 {
 	public static void main(String[]args)
 	{
-		Scanner input = new Scanner(System.in);
+		Scanner bm = new Scanner(System.in);
 		Exercise_02 receipt = new Exercise_02();
 		
 		System.out.println("Please enter item 1:");
-		String item1 = input.nextLine();
+		String item1 = bm.nextLine();
 		System.out.println("Please enter the price:");
-		double price1 = input.nextDouble();
+		double price1 = bm.nextDouble();
 		
-		input.nextLine();
+		bm.nextLine();
 		System.out.println("Please enter item 2:");
-		String item2 = input.nextLine();
+		String item2 = bm.nextLine();
 		System.out.println("Please enter the price:");
-		double price2 = input.nextDouble();
+		double price2 = bm.nextDouble();
 		
-		input.nextLine();
+		bm.nextLine();
 		System.out.println("Please enter item 3:");
-		String item3 = input.nextLine();
+		String item3 = bm.nextLine();
 		System.out.println("Please enter the price:");
-		double price3 = input.nextDouble();
+		double price3 = bm.nextDouble();
 		
 		double subTotal = price1+price2+price3;
 		double discounted = subTotal - (discount(subTotal));

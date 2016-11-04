@@ -8,14 +8,14 @@ public class Ex_01
 		
 		System.out.println("Enter a word:");
 		
-		String bop = kb.nextLine();
+		String stri = kb.nextLine();
 		
-		int pob = bop.length();
+		int pob = stri.length();
 		
 		
 		for (int i = 1; i <= pob; i++)
 		{
-			System.out.println(bop);
+			System.out.println(stri);
 		}
 	}
 }
