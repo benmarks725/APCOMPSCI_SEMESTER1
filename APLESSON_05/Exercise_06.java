@@ -21,20 +21,23 @@ public class Exercise_06
 		{
 			System.out.println("You are granted access!");
 		}
-		if (!(kbUsername.equals(user)) && (kbPassword.equals(pass)))
+		else
 		{
-			System.out.println("Your username is incorrect.");
-			passwordVerify();
-		}
-		if ((kbUsername.equals(user)) && !(kbPassword.equals(pass)))
-		{
-			System.out.println("Your password is incorrect.");
-			passwordVerify();
-		}
-		if (!(kbUsername.equals(user)) && !(kbPassword.equals(pass)))
-		{
-			System.out.println("Your username and password are incorrect");
-			passwordVerify();
+			if (kbPassword.equals(pass))
+			{
+				System.out.println("Your username is incorrect.");
+				passwordVerify();
+			}
+			else if (kbUsername.equals(user))
+			{
+				System.out.println("Your password is incorrect.");
+				passwordVerify();
+			}
+			else
+			{
+				System.out.println("Your username and password are incorrect");
+				passwordVerify();
+			}
 		}
 	}
 }
