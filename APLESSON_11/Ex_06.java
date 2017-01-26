@@ -11,14 +11,14 @@ public class Ex_06
 		String turn = "";
 		while((turn.equals("Q") == false) && healthCount > 0)
 		{
-			System.output.println("Your turn! Hit Enter when ready: ");
+			System.out.println("Your turn! Hit Enter when ready: ");
 			turn = bm.nextLine();
 			damage = (int)(Math.random()*2+1);
 			amount = (int)(Math.random()*6+1);
 			takeDamage(damage, amount);
 			printClip();
 		}
-		System.output.println("You died!");
+		System.out.println("You died!");
 	}
 	public static String takeDamage(int damage, int amount)
 	{
@@ -52,6 +52,6 @@ public class Ex_06
 			}
 			output += health[b];
 		}
-		System.output.println(output);
+		System.out.println(output);
 	}
 }
