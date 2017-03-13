@@ -1,21 +1,21 @@
 public class GMC implements Location
 {
-	private int Coorx, Coory;
+	private int xcoordinate, ycoordinate;
 	public GMC()
 	{
-		Coorx = 0;
-		Coory = 0;		
+		xcoordinate = 0;
+		ycoordinate = 0;		
 	}
 	public GMC(int x, int y)
 	{
-		Coorx = x;
-		Coory = y;
+		xcoordinate = x;
+		ycoordinate = y;
 	}
 	public double[] getLoc()
 	{
 		double location[] = new double[2];
-		location[0] = Coorx;
-		location[1] = Coory;
+		location[0] = xcoordinate;
+		location[1] = ycoordinate;
 		return location;
 	}
 	public int getID()

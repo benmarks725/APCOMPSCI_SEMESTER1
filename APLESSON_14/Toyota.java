@@ -1,25 +1,25 @@
 public class Toyota implements Location
 {	
-	private String scoor;
-	private double Coorx;
-	private double Coory;
+	private String scoordinate;
+	private double xcoordinate;
+	private double ycoordinate;
 	public Toyota()
 	{
-		scoor = "";		
+		scoordinate = "";		
 	}
 	public Toyota(String inp)
 	{
-		scoor = inp;
+		scoordinate = inp;
 	}
 	public double[] getLoc()
 	{
-		String str = scoor;
-		String[] sep = scoor.split(", ");
-		Coorx = Double.valueOf(sep[0]).doubleValue();
-		Coory = Double.valueOf(sep[1]).doubleValue();
+		String str = scoordinate;
+		String[] sep = scoordinate.split(", ");
+		xcoordinate = Double.valueOf(sep[0]).doubleValue();
+		ycoordinate = Double.valueOf(sep[1]).doubleValue();
 		double location[] = new double[2];
-		location[0] = Coorx;
-		location[1] = Coory;
+		location[0] = xcoordinate;
+		location[1] = ycoordinate;
 		return location;
 	}
 	public int getID()

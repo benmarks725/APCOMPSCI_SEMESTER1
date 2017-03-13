@@ -1,21 +1,21 @@
 public class Honda implements Location
 {
-	private double Coorx, Coory;
+	private double xcoordinate, ycoordinate;
 	public Honda()
 	{
-		Coorx = 0;
-		Coory = 0;		
+		xcoordinate = 0;
+		ycoordinate = 0;		
 	}
-	public Honda(double[] inpcoor)
+	public Honda(double[] coord)
 	{
-		Coorx = inpcoor[0];
-		Coory = inpcoor[1];
+		xcoordinate = coord[0];
+		ycoordinate = coord[1];
 	}
 	public double[] getLoc()
 	{
 		double location[] = new double[2];
-		location[0] = Coorx;
-		location[1] = Coory;
+		location[0] = xcoordinate;
+		location[1] = ycoordinate;
 		return location;
 	}
 	public int getID()
