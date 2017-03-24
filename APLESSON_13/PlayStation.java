@@ -1,5 +1,7 @@
 public class PlayStation extends Console
 {
+	public String platform;
+	public int serialNo;
 	public PlayStation()
 	{
 		super();
@@ -15,5 +17,13 @@ public class PlayStation extends Console
 	public String getPlatform()
 	{
 		return "PlayStation";
+	}
+	public int getSerialNo()
+	{
+		return super.getSerialNo();
+	}
+	public String toString()
+	{
+		return super.toString();
 	}
 }
