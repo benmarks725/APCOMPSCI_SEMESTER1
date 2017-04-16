@@ -22,4 +22,9 @@ public class Honda implements Location
 	{
 		return (int)(Math.random() * 999999) + 1;
 	}
+	public void move(double x, double y)
+	{
+		xcoordinate = x;
+		ycoordinate = y;
+	}
 }

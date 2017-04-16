@@ -7,9 +7,9 @@ public class Toyota implements Location
 	{
 		scoordinate = "";		
 	}
-	public Toyota(String inp)
+	public Toyota(String b)
 	{
-		scoordinate = inp;
+		scoordinate = b;
 	}
 	public double[] getLoc()
 	{
@@ -25,5 +25,10 @@ public class Toyota implements Location
 	public int getID()
 	{
 		return (int)(Math.random() * 999999) + 1;
+	}
+	public void move(double x, double y)
+	{
+		xcoordinate = x;
+		ycoordinate = y;
 	}
 }

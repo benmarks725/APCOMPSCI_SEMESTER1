@@ -22,4 +22,9 @@ public class GMC implements Location
 	{
 		return (int)(Math.random() * 999999) + 1;
 	}
+	public void move(int x, int y)
+	{
+		xcoordinate = x;
+		ycoordinate = y;
+	}
 }
