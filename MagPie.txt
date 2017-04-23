@@ -1,0 +1,144 @@
+getResponse()
+Did you finish the code? 
+If so…
+Copy and paste your code here
+public String getResponse(String statement)
+	{
+		String response = "";
+		if (statement.length() == 0)
+		{
+			response = "Say something, please.";
+		}
+		if (findKeyword(statement, " no ") >= 0 || findKeyword(statement, " not ") >= 0 || findKeyword(statement, "n't") >= 0)
+		{
+			response = "Why so negative?";
+		}
+		else if (findKeyword(statement, "mother") >= 0
+				|| findKeyword(statement, "father") >= 0
+				|| findKeyword(statement, "sister") >= 0
+				|| findKeyword(statement, "brother") >= 0)
+		{
+			response = "Tell me more about your family.";
+		}
+How similar is your code to the one provided?
+My code is pretty similar to the one provided but I have added some more parameters to return the "Why so negative response" 
+Is your code more or less efficient?
+My code is more efficient because I entered spaces before and after the word "no" so it only returns that response for the word no by itself.
+What could you have done differently?
+There's not much I could have done differently as my code is already fairly efficient.
+What did you learn from comparing your code to the provided answer?
+I learned that generally how chatbots are created using a series of if statements with parameters.
+
+findKeyword()
+Did you finish the code? 
+If so…
+Copy and paste your code here
+private int findKeyword(String statement, String goal, int startPos)
+	{
+			String phrase = statement;
+			goal = goal.toLowerCase();
+			phrase = statement.trim().toLowerCase();
+			int psn = phrase.indexOf(goal, startPos);
+		while(psn >= 0)
+		{
+			String before = "";
+			String after = "";
+			if (psn > 0)
+			{
+				before = phrase.substring(psn-1, psn);
+			}
+			if (psn + goal.length() < phrase.length())
+			{
+				after = phrase.substring(psn + goal.length(), psn + 1 + goal.length());	
+			}
+			if ((before.compareTo("a") < 0 || before.compareTo("z") > 0) && (after.compareTo("a") < 0 || after.compareTo("z") > 0))
+			{		
+				return psn;
+			}
+			psn = phrase.indexOf(goal, psn+1);
+		}
+		return -1;
+	}
+	private int findKeyword(String statement, String goal)
+	{
+		return findKeyword(statement, goal, 0);
+	}
+How similar is your code to the one provided?
+My code is very similar to the one provided except for a few minor differences.
+Is your code more or less efficient?
+My code is less efficient because I could have declared the String phrase in one line rather than two lines.
+What could you have done differently?
+I couldn't have done too much differently except for being more efficient in the declarations.
+What did you learn from comparing your code to the provided answer? 
+I learned that you can instantiate variables in while loops.
+
+Exercise_03
+Paste your code here and explain how it works.
+
+else if (findKeyword(statement, ("cat")) >= 0
+		 || findKeyword(statement, ("dog")) >= 0
+		 || findKeyword(statement, ("fish")) >= 0
+		 || findKeyword(statement, ("turtle")) >= 0)
+		 {
+			 response = "Tell me more about your pet.";
+		 }			
+		else if (findKeyword(statement, "Robinette") >= 0)
+		{
+			response = "He sounds like a pretty dank teacher.";
+		}
+		else
+		{
+			response = getRandomResponse();
+		}
+		return response;
+	}
+The code takes the parameters of the word in the parentheses you want to find and plugs it into the findKeyword method. If findKeyword returns a value greater than -1, the desired response is printed.
+
+transformIWantStatement()
+Did you finish the code? 
+If not…
+What information was missing?
+I did not add the parameter "0" into the int psn = findKeyword method and I added an unnecessary if statement where I should have just declared the String restOfStatement.
+What were you unable to figure out?
+I was unable to figure out why there were errors every time I ahd a private String transformIWantToStatement and transformYouMeStatement.
+	private String transformIWantToStatement(String statement)
+	{
+	   statement = statement.trim();
+	   String lastChar = statement.substring(statement.length()-1);
+	   if (lastChar.equals("."))
+	   {
+		   statement = statement.substring(0, statement.length()-1);
+	   }
+	   int psn = findKeyword(statement, "I want to");
+	   String restOfStatement = "";
+	   if(psn > -1)
+	   {
+		   restOfStatement = statement.substring(psn + 9);
+	   }
+	   return "What would it mean to" + restOfStatement;
+	}
+
+transformYouMeStatement()
+Did you finish the code? 
+If not…
+What information was missing?
+I did not add the parameter "0" into the int psnYou = findKeyword method and I subtracted by two when it should have been only one in the if statement.
+What were you unable to figure out?
+I was unable to figure out why there were errors every time I ahd a private String transformIWantToStatement and transformYouMeStatement.
+	private String transformYouMeStatement(String statement)
+	{
+	   statement = statement.trim();
+	   String lastChar = statement.substring(statement.length()-1);
+	   if (lastChar.equals("."))
+	   {
+		   statement = statement.substring(0, statement.length()-2);
+	   }
+	   int psnYou = findKeyword(statement, "you");
+	   int psnMe = findKeyword(statement, "me", psnYou + 3);
+	   String restOfStatement = "";
+	   if(psnYou > -1)
+			restOfStatement = statement.substring(psnYou + 3, psnMe);
+	   
+	   return "What makes you think that I" + restOfStatement + "you?";
+	}
+}
