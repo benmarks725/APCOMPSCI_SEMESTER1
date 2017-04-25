@@ -231,7 +231,7 @@ public class Picture extends SimplePicture
 		for (int col = 98; col < 169; col++)
 		{
 			topPixel = pixels[row][col];
-			botPixel = pixels[190 - row + 190][col];
+			botPixel = pixels[191 - row + 191][col];
 			botPixel.setColor(topPixel.getColor());
 		}
 	}
