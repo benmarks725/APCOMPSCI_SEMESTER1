@@ -231,19 +231,11 @@ public class Picture extends SimplePicture
 		for (int col = 98; col < 169; col++)
 		{
 			topPixel = pixels[row][col];
-			botPixel = pixels[191-row+191][col];
+			botPixel = pixels[190 - row + 190][col];
 			botPixel.setColor(topPixel.getColor());
 		}
 	}
-	for (int row = 155; row < 191; row++)
-	{
-		for (int col = 238; col < 296; col++)
-		{
-			topPixel = pixels[row][col];
-			botPixel = pixels[191-row+191][col];
-			botPixel.setColor(topPixel.getColor());
-		}			
-	}
+	
   }
   public void mirrorGull()
   {
