@@ -11,8 +11,7 @@ public class Magpie2
 	 * 	Gives a response to a user statement
 	 *  @param statement (the user statement)
 	 * 	@return a response based on the rules given */
-	public String getResponse(String statement)
-	{
+	public String getResponse(String statement) {
 		String response = "";
 
 		/** Exercise_01:
@@ -21,22 +20,18 @@ public class Magpie2
 		 * 	if you enter nothing, or if you accidentally hit
 		 * 	enter. Think to yourself: "What is the length of
 		 * 	an empty String?" */
-		if (statement.length() == 0)
-		{
+		if (statement.length() == 0) {
 			response = "Say something, please.";
 		}
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		if (findKeyword(statement, " no ") >= 0 || findKeyword(statement, " not ") >= 0 || findKeyword(statement, "n't") >= 0)
-		{
+		if (findKeyword(statement, " no ") >= 0 || findKeyword(statement, " not ") >= 0 || findKeyword(statement, "n't") >= 0) {
 			response = "Why so negative?";
-		}
-		else if (findKeyword(statement, "mother") >= 0
+		} else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
-				|| findKeyword(statement, "brother") >= 0)
-		{
+				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
 		}
 		 /* Exercise_03(Final)
@@ -45,42 +40,39 @@ public class Magpie2
 		 * responds "Tell me more about your pet" if the
 		 * user mentions the word cat, dog, fish, or turtle
 		 * in their statement.*/
-		 
-		 else if (findKeyword(statement, ("cat")) >= 0
-		 || findKeyword(statement, ("dog")) >= 0
-		 || findKeyword(statement, ("fish")) >= 0
-		 || findKeyword(statement, ("turtle")) >= 0)
-		 {
-			 response = "Tell me more about your pet.";
-		 }			
-		 /** Create addtional code (another else if) that
+
+		else if (findKeyword(statement, ("cat")) >= 0
+				|| findKeyword(statement, ("dog")) >= 0
+				|| findKeyword(statement, ("fish")) >= 0
+				|| findKeyword(statement, ("turtle")) >= 0)
+		{
+			response = "Tell me more about your pet.";
+		}
+		/** Create addtional code (another else if) that
 		 * responds "He sounds like a pretty dank teacher"
 		 * if you mention "Robinette" in your statement*/
-		else if (findKeyword(statement, "Robinette") >= 0)
-		{
+		else if (findKeyword(statement, "Robinette") >= 0) {
 			response = "He sounds like a pretty dank teacher.";
 		}
 		// Responses which require transformations
-		else if (findKeyword(statement, "I want to", 0) >= 0)
-			{
-				response = transformIWantToStatement(statement);
-			}
+		else if (findKeyword(statement, "I want to", 0) >= 0) {
+			response = transformIWantToStatement(statement);
+		}
 		else
 		{
 			// Look for a two word (you <something> me)
 			// pattern
 			int psn = findKeyword(statement, "you", 0);
-				if (psn >= 0
-				&& findKeyword(statement, "me", psn) >= 0)
-				{
-					response = transformYouMeStatement(statement);
-				}
-			else
-			{
+			if (psn >= 0
+					&& findKeyword(statement, "me", psn) >= 0) {
+				response = transformYouMeStatement(statement);
+			} else {
 				response = getRandomResponse();
 			}
 			return response;
 		}
+		return response;
+	}
 	/**
 	* Take a statement with "I want to <something>." and transform it into
 	* "What would it mean to <something>?"
@@ -152,7 +144,6 @@ public class Magpie2
 	   
 	   return "What makes you think that I" + restOfStatement + "you?";
 	}
-}
 
 	/** Ex_02: The findKeyword() Method...
 	 * ========================================================= */
