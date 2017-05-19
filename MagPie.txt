@@ -96,12 +96,9 @@ The code takes the parameters of the word in the parentheses you want to find an
 
 transformIWantStatement()
 Did you finish the code? 
-If not…
-What information was missing?
-I did not add the parameter "0" into the int psn = findKeyword method and I added an unnecessary if statement where I should have just declared the String restOfStatement.
-What were you unable to figure out?
-I was unable to figure out why there were errors every time I ahd a private String transformIWantToStatement and transformYouMeStatement.
-	private String transformIWantToStatement(String statement)
+If so…
+Copy and paste your code here
+private String transformIWantToStatement(String statement)
 	{
 	   statement = statement.trim();
 	   String lastChar = statement.substring(statement.length()-1);
@@ -109,7 +106,7 @@ I was unable to figure out why there were errors every time I ahd a private Stri
 	   {
 		   statement = statement.substring(0, statement.length()-1);
 	   }
-	   int psn = findKeyword(statement, "I want to");
+	   int psn = findKeyword(statement, "i want to");
 	   String restOfStatement = "";
 	   if(psn > -1)
 	   {
@@ -117,15 +114,21 @@ I was unable to figure out why there were errors every time I ahd a private Stri
 	   }
 	   return "What would it mean to" + restOfStatement;
 	}
+How similar is your code to the one provided?
+My code is pretty similar to the one provided but I have an extra if statement.
+Is your code more or less efficient?
+My code is less efficient than the one provided because I have an extra if statement.
+What could you have done differently?
+I could have condensed my code by adding 0 in the findkeyword method to make my code more efficient.
+What did you learn from comparing your code to the provided 
+answer?
+I learned how to complete the transformIwanttostatement more efficiently.
 
 transformYouMeStatement()
 Did you finish the code? 
-If not…
-What information was missing?
-I did not add the parameter "0" into the int psnYou = findKeyword method and I subtracted by two when it should have been only one in the if statement.
-What were you unable to figure out?
-I was unable to figure out why there were errors every time I ahd a private String transformIWantToStatement and transformYouMeStatement.
-	private String transformYouMeStatement(String statement)
+If so…
+Copy and paste your code here
+private String transformYouMeStatement(String statement)
 	{
 	   statement = statement.trim();
 	   String lastChar = statement.substring(statement.length()-1);
@@ -141,4 +144,12 @@ I was unable to figure out why there were errors every time I ahd a private Stri
 	   
 	   return "What makes you think that I" + restOfStatement + "you?";
 	}
-}
+ How similar is your code to the one provided?
+My code is fairly similar to the one provided with a few minor differences in the if statement and the variable intpsnOfYou.
+Is your code more or less efficient?
+My code isn't really more or less efficient but performs the same task.
+What could you have done differently?
+I couldn't have done much different as my code works and compiles and runs.
+What did you learn from comparing your code to the provided 
+answer?
+I learned that I correctly completed the transformYouMeStatement.
