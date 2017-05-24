@@ -26,7 +26,7 @@ public class Magpie2
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		if (findKeyword(statement, " no ") >= 0 || findKeyword(statement, " not ") >= 0 || findKeyword(statement, "n't") >= 0) {
+		else if (findKeyword(statement, "no") >= 0 || findKeyword(statement, "not") >= 0 || findKeyword(statement, "n't") >= 0) {
 			response = "Why so negative?";
 		} else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
@@ -67,7 +67,7 @@ public class Magpie2
 			{
 				response = transformYouMeStatement(statement);
 			}
-			if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
+			else if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
 			{
 				response = transformIYouStatement(statement);
 			}
@@ -111,7 +111,7 @@ public class Magpie2
 	   {
 		   restOfStatement = statement.substring(psn + 9);
 	   }
-	   return "What would it mean to" + restOfStatement;
+	   return "What would it mean to" + restOfStatement+ "?";
 	}
 	/**
 	* Take a statement with "you <something> me" and transform it into
@@ -142,10 +142,10 @@ public class Magpie2
 	   {
 		   statement = statement.substring(0, statement.length()-1);
 	   }
-	   int psnYou = findKeyword(statement, "you", 0);
-	   int psnMe = findKeyword(statement, "me", psnYou + 3);
-	   String restOfStatement = restOfStatement = statement.substring(psnYou + 3, psnMe).trim();
-	   return "What makes you think that I" + restOfStatement + "you?";
+	   int psnOfYou = findKeyword(statement, "you", 0);
+	   int psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
+	   String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
+	   return "What makes you think that I " + restOfStatement + " you?";
 	}
 	private String transformIYouStatement(String statement)
 	{
