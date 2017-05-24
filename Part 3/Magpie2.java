@@ -140,14 +140,11 @@ public class Magpie2
 	   String lastChar = statement.substring(statement.length()-1);
 	   if (lastChar.equals("."))
 	   {
-		   statement = statement.substring(0, statement.length()-2);
+		   statement = statement.substring(0, statement.length()-1);
 	   }
-	   int psnYou = findKeyword(statement, "you");
+	   int psnYou = findKeyword(statement, "you", 0);
 	   int psnMe = findKeyword(statement, "me", psnYou + 3);
-	   String restOfStatement = "";
-	   if(psnYou > -1)
-			restOfStatement = statement.substring(psnYou + 3, psnMe);
-	   
+	   String restOfStatement = restOfStatement = statement.substring(psnYou + 3, psnMe).trim();
 	   return "What makes you think that I" + restOfStatement + "you?";
 	}
 	private String transformIYouStatement(String statement)
