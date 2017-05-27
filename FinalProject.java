@@ -41,7 +41,7 @@ public class FinalProject
         double gonzagaoffreboundspergame = 0;
         double gonzagadefreboundspergame = 0;
         double gonzagapossessions = 0;
-        double gonzagaoppfga = 875;
+        double gonzagaoppfga = 2400;
         double gonzagaoppfta = 646;
         double gonzagaopporb = 421;
         double gonzagatoforced = 475;
@@ -1311,9 +1311,1673 @@ public class FinalProject
                 purduedefreboundspergame+" Defensive Rebounds Per Game\n"+purduepossessions+" Possessions\n"+
                 purduedefrating+" Defensive Rating\n"+purdueeffectivefgpercentage+" EFG%\n"+purdueteamgamescore+" Team Game Score\n"
                 +purduenetrating+" Net Rating\n"+purdueoffensiverating+" Offensive Rating\n"+purduepace+" Pace\n"+purduetrueshootingpercentage+" True Shooting Percentage\n");
+				
+				
+		double baylorwins = 27;
+        double baylorgamesplayed = 35;
+        double baylorwinpercentage = 0;
+        double baylorpointsscored = 2550;
+        double baylorppg = 0;
+        double baylorpointsallowed = 2228;
+        double baylorpapg = 0;
+        double baylorfgm = 921;
+        double baylorfga = 1956;
+        double baylorfgptg = 0;
+        double baylor2ptfgm = 691;
+        double baylor2ptfga = 1315;
+        double baylor2ptfgptg = 0;
+        double baylor3ptfgm = 230;
+        double baylor3ptfga = 641;
+        double baylor3ptfgptg = 0;
+        double baylorassists = 544;
+        double baylorassistspergame = 0;
+        double baylorassistsperfgm = 0;
+        double baylorassiststoturnoverratio = 0;
+        double baylorturnovers = 469;
+        double baylorturnoverspergame = 0;
+        double baylorblocks = 166;
+        double baylorblockspergame = 0;
+        double baylorsteals = 180;
+        double baylorstealspergame = 0;
+        double baylorfta = 661;
+        double baylorftm = 478;
+        double baylorturnoverpercentage = 0;
+        double baylorftpercentage = 0;
+        double baylorrebounds = 1329;
+        double bayloroffrebounds = 445;
+        double baylordefrebounds = 884;
+        double baylorreboundspergame = 0;
+        double bayloroffreboundspergame = 0;
+        double baylordefreboundspergame = 0;
+        double baylorpossessions = 0;
+        double bayloroppfga = 1960;
+        double bayloroppfta = 586;
+        double bayloropporb = 351;
+        double baylortoforced = 397;
+        double baylordefrating = 0;
+        double bayloreffectivefgpercentage = 0;
+        double baylorteamgamescore = 0;
+        double baylorfouls = 617;
+        double baylornetrating = 0;
+        double bayloroffensiverating = 0;
+        double baylorpace = 0;
+        double baylorminutesplayed = 7000;
+        double baylortrueshootingpercentage = 0;
+        baylorwinpercentage = (baylorwins/baylorgamesplayed)*100;
+        baylorppg = (baylorpointsscored/baylorgamesplayed);
+        baylorpapg = (baylorpointsallowed/baylorgamesplayed);
+        baylorfgptg = (baylorfgm/baylorfga)*100;
+        baylor2ptfgptg = (baylor2ptfgm/baylor2ptfga)*100;
+        baylor3ptfgptg = (baylor3ptfgm/baylor3ptfga)*100;
+        baylorassistspergame = (baylorassists/baylorgamesplayed);
+        baylorassistsperfgm = (baylorassists/baylorfgm);
+        baylorassiststoturnoverratio = (baylorassists/baylorturnovers);
+        baylorblockspergame = (baylorblocks/baylorgamesplayed);
+        baylorstealspergame = (baylorsteals/baylorgamesplayed);
+        baylorturnoverspergame = (baylorturnovers/baylorgamesplayed);
+        baylorturnoverpercentage = (100*baylorturnovers)/(baylorfga+(0.475*baylorfta)+baylorturnovers);
+        baylorftpercentage = (baylorftm/baylorfta)*100;
+        baylorreboundspergame = (baylorrebounds/baylorgamesplayed);
+        bayloroffreboundspergame = (bayloroffrebounds/baylorgamesplayed);
+        baylordefreboundspergame = (baylordefrebounds/baylorgamesplayed);
+        baylorpossessions = (0.5 * (baylorfga + (0.475 * baylorfta) - bayloroffrebounds + baylorturnovers) + 0.5 * (bayloroppfga + (0.475 * bayloroppfta) - bayloropporb + baylortoforced));
+        baylordefrating = 100*(baylorpointsallowed/baylorpossessions);
+        bayloreffectivefgpercentage = ((baylorfgm+(0.5*baylor3ptfgm))/baylorfga)*100;
+        baylorteamgamescore = ((baylorpointsscored + (0.4 * baylorfgm) - (0.7 * baylorfga) - (0.4*(baylorfta - baylorftm)) + (0.7 * bayloroffrebounds) + (0.3 * baylordefrebounds) + baylorsteals + (0.7 * baylorassists) + (0.7 * baylorblocks) - (0.4 * baylorfouls) - baylorturnovers)/8)/baylorgamesplayed;
+        baylornetrating = 100 * ((baylorpointsscored - baylorpointsallowed) / baylorpossessions);
+        bayloroffensiverating = 100 * (baylorpointsscored / baylorpossessions);
+        baylorpace = 40 * (baylorpossessions / (0.2 * baylorminutesplayed));
+        baylortrueshootingpercentage = (baylorpointsscored / (2 * (baylorfga + 0.475 * baylorfta)))*100;
+        System.out.println("\nBaylor:\n" + baylorwinpercentage + "% Win Percentage\n" + baylorppg +
+                " Points Per Game\n"+baylorpapg+ " Points Allowed Per Game\n"+baylorfgptg+
+                "% Field Goal Percentage\n"+baylor2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +baylor3ptfgptg+"% 3 Point Field Goal Percentage\n"+baylorassistspergame+" Assists Per Game\n"+
+                baylorassistsperfgm+" Assists Per FGM\n"+ baylorassiststoturnoverratio+" Assists : TO Ratio\n"+
+                baylorblockspergame+" Blocks Per Game\n"+baylorstealspergame+" Steals Per Game\n"+
+                baylorturnoverspergame+" TO Per Game\n"+baylorturnoverpercentage+" TO%\n"+ baylorftpercentage+" FT%\n"+
+                baylorreboundspergame+" Rebounds Per Game\n"+bayloroffreboundspergame+" Offensive Rebounds Per game\n"+
+                baylordefreboundspergame+" Defensive Rebounds Per Game\n"+baylorpossessions+" Possessions\n"+
+                baylordefrating+" Defensive Rating\n"+bayloreffectivefgpercentage+" EFG%\n"+baylorteamgamescore+" Team Game Score\n"
+                +baylornetrating+" Net Rating\n"+bayloroffensiverating+" Offensive Rating\n"+baylorpace+" Pace\n"+baylortrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double wisconsinwins = 27;
+        double wisconsingamesplayed = 37;
+        double wisconsinwinpercentage = 0;
+        double wisconsinpointsscored = 2678;
+        double wisconsinppg = 0;
+        double wisconsinpointsallowed = 2308;
+        double wisconsinpapg = 0;
+        double wisconsinfgm = 971;
+        double wisconsinfga = 2135;
+        double wisconsinfgptg = 0;
+        double wisconsin2ptfgm = 688;
+        double wisconsin2ptfga = 1347;
+        double wisconsin2ptfgptg = 0;
+        double wisconsin3ptfgm = 283;
+        double wisconsin3ptfga = 788;
+        double wisconsin3ptfgptg = 0;
+        double wisconsinassists = 504;
+        double wisconsinassistspergame = 0;
+        double wisconsinassistsperfgm = 0;
+        double wisconsinassiststoturnoverratio = 0;
+        double wisconsinturnovers = 410;
+        double wisconsinturnoverspergame = 0;
+        double wisconsinblocks = 130;
+        double wisconsinblockspergame = 0;
+        double wisconsinsteals = 250;
+        double wisconsinstealspergame = 0;
+        double wisconsinfta = 703;
+        double wisconsinftm = 453;
+        double wisconsinturnoverpercentage = 0;
+        double wisconsinftpercentage = 0;
+        double wisconsinrebounds = 1377;
+        double wisconsinoffrebounds = 452;
+        double wisconsindefrebounds = 925;
+        double wisconsinreboundspergame = 0;
+        double wisconsinoffreboundspergame = 0;
+        double wisconsindefreboundspergame = 0;
+        double wisconsinpossessions = 0;
+        double wisconsinoppfga = 1992;
+        double wisconsinoppfta = 559;
+        double wisconsinopporb = 313;
+        double wisconsintoforced = 473;
+        double wisconsindefrating = 0;
+        double wisconsineffectivefgpercentage = 0;
+        double wisconsinteamgamescore = 0;
+        double wisconsinfouls = 678;
+        double wisconsinnetrating = 0;
+        double wisconsinoffensiverating = 0;
+        double wisconsinpace = 0;
+        double wisconsinminutesplayed = 7500;
+        double wisconsintrueshootingpercentage = 0;
+        wisconsinwinpercentage = (wisconsinwins/wisconsingamesplayed)*100;
+        wisconsinppg = (wisconsinpointsscored/wisconsingamesplayed);
+        wisconsinpapg = (wisconsinpointsallowed/wisconsingamesplayed);
+        wisconsinfgptg = (wisconsinfgm/wisconsinfga)*100;
+        wisconsin2ptfgptg = (wisconsin2ptfgm/wisconsin2ptfga)*100;
+        wisconsin3ptfgptg = (wisconsin3ptfgm/wisconsin3ptfga)*100;
+        wisconsinassistspergame = (wisconsinassists/wisconsingamesplayed);
+        wisconsinassistsperfgm = (wisconsinassists/wisconsinfgm);
+        wisconsinassiststoturnoverratio = (wisconsinassists/wisconsinturnovers);
+        wisconsinblockspergame = (wisconsinblocks/wisconsingamesplayed);
+        wisconsinstealspergame = (wisconsinsteals/wisconsingamesplayed);
+        wisconsinturnoverspergame = (wisconsinturnovers/wisconsingamesplayed);
+        wisconsinturnoverpercentage = (100*wisconsinturnovers)/(wisconsinfga+(0.475*wisconsinfta)+wisconsinturnovers);
+        wisconsinftpercentage = (wisconsinftm/wisconsinfta)*100;
+        wisconsinreboundspergame = (wisconsinrebounds/wisconsingamesplayed);
+        wisconsinoffreboundspergame = (wisconsinoffrebounds/wisconsingamesplayed);
+        wisconsindefreboundspergame = (wisconsindefrebounds/wisconsingamesplayed);
+        wisconsinpossessions = (0.5 * (wisconsinfga + (0.475 * wisconsinfta) - wisconsinoffrebounds + wisconsinturnovers) + 0.5 * (wisconsinoppfga + (0.475 * wisconsinoppfta) - wisconsinopporb + wisconsintoforced));
+        wisconsindefrating = 100*(wisconsinpointsallowed/wisconsinpossessions);
+        wisconsineffectivefgpercentage = ((wisconsinfgm+(0.5*wisconsin3ptfgm))/wisconsinfga)*100;
+        wisconsinteamgamescore = ((wisconsinpointsscored + (0.4 * wisconsinfgm) - (0.7 * wisconsinfga) - (0.4*(wisconsinfta - wisconsinftm)) + (0.7 * wisconsinoffrebounds) + (0.3 * wisconsindefrebounds) + wisconsinsteals + (0.7 * wisconsinassists) + (0.7 * wisconsinblocks) - (0.4 * wisconsinfouls) - wisconsinturnovers)/8)/wisconsingamesplayed;
+        wisconsinnetrating = 100 * ((wisconsinpointsscored - wisconsinpointsallowed) / wisconsinpossessions);
+        wisconsinoffensiverating = 100 * (wisconsinpointsscored / wisconsinpossessions);
+        wisconsinpace = 40 * (wisconsinpossessions / (0.2 * wisconsinminutesplayed));
+        wisconsintrueshootingpercentage = (wisconsinpointsscored / (2 * (wisconsinfga + 0.475 * wisconsinfta)))*100;
+        System.out.println("\nWisconsin:\n" + wisconsinwinpercentage + "% Win Percentage\n" + wisconsinppg +
+                " Points Per Game\n"+wisconsinpapg+ " Points Allowed Per Game\n"+wisconsinfgptg+
+                "% Field Goal Percentage\n"+wisconsin2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +wisconsin3ptfgptg+"% 3 Point Field Goal Percentage\n"+wisconsinassistspergame+" Assists Per Game\n"+
+                wisconsinassistsperfgm+" Assists Per FGM\n"+ wisconsinassiststoturnoverratio+" Assists : TO Ratio\n"+
+                wisconsinblockspergame+" Blocks Per Game\n"+wisconsinstealspergame+" Steals Per Game\n"+
+                wisconsinturnoverspergame+" TO Per Game\n"+wisconsinturnoverpercentage+" TO%\n"+ wisconsinftpercentage+" FT%\n"+
+                wisconsinreboundspergame+" Rebounds Per Game\n"+wisconsinoffreboundspergame+" Offensive Rebounds Per game\n"+
+                wisconsindefreboundspergame+" Defensive Rebounds Per Game\n"+wisconsinpossessions+" Possessions\n"+
+                wisconsindefrating+" Defensive Rating\n"+wisconsineffectivefgpercentage+" EFG%\n"+wisconsinteamgamescore+" Team Game Score\n"
+                +wisconsinnetrating+" Net Rating\n"+wisconsinoffensiverating+" Offensive Rating\n"+wisconsinpace+" Pace\n"+wisconsintrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double oklahomastwins = 20;
+        double oklahomastgamesplayed = 33;
+        double oklahomastwinpercentage = 0;
+        double oklahomastpointsscored = 2828;
+        double oklahomastppg = 0;
+        double oklahomastpointsallowed = 2589;
+        double oklahomastpapg = 0;
+        double oklahomastfgm = 957;
+        double oklahomastfga = 2050;
+        double oklahomastfgptg = 0;
+        double oklahomast2ptfgm = 663;
+        double oklahomast2ptfga = 1318;
+        double oklahomast2ptfgptg = 0;
+        double oklahomast3ptfgm = 294;
+        double oklahomast3ptfga = 732;
+        double oklahomast3ptfgptg = 0;
+        double oklahomastassists = 486;
+        double oklahomastassistspergame = 0;
+        double oklahomastassistsperfgm = 0;
+        double oklahomastassiststoturnoverratio = 0;
+        double oklahomastturnovers = 432;
+        double oklahomastturnoverspergame = 0;
+        double oklahomastblocks = 99;
+        double oklahomastblockspergame = 0;
+        double oklahomaststeals = 252;
+        double oklahomaststealspergame = 0;
+        double oklahomastfta = 786;
+        double oklahomastftm = 620;
+        double oklahomastturnoverpercentage = 0;
+        double oklahomastftpercentage = 0;
+        double oklahomastrebounds = 1215;
+        double oklahomastoffrebounds = 450;
+        double oklahomastdefrebounds = 765;
+        double oklahomastreboundspergame = 0;
+        double oklahomastoffreboundspergame = 0;
+        double oklahomastdefreboundspergame = 0;
+        double oklahomastpossessions = 0;
+        double oklahomastoppfga = 1856;
+        double oklahomastoppfta = 834;
+        double oklahomastopporb = 345;
+        double oklahomasttoforced = 491;
+        double oklahomastdefrating = 0;
+        double oklahomasteffectivefgpercentage = 0;
+        double oklahomastteamgamescore = 0;
+        double oklahomastfouls = 730;
+        double oklahomastnetrating = 0;
+        double oklahomastoffensiverating = 0;
+        double oklahomastpace = 0;
+        double oklahomastminutesplayed = 6600;
+        double oklahomasttrueshootingpercentage = 0;
+        oklahomastwinpercentage = (oklahomastwins/oklahomastgamesplayed)*100;
+        oklahomastppg = (oklahomastpointsscored/oklahomastgamesplayed);
+        oklahomastpapg = (oklahomastpointsallowed/oklahomastgamesplayed);
+        oklahomastfgptg = (oklahomastfgm/oklahomastfga)*100;
+        oklahomast2ptfgptg = (oklahomast2ptfgm/oklahomast2ptfga)*100;
+        oklahomast3ptfgptg = (oklahomast3ptfgm/oklahomast3ptfga)*100;
+        oklahomastassistspergame = (oklahomastassists/oklahomastgamesplayed);
+        oklahomastassistsperfgm = (oklahomastassists/oklahomastfgm);
+        oklahomastassiststoturnoverratio = (oklahomastassists/oklahomastturnovers);
+        oklahomastblockspergame = (oklahomastblocks/oklahomastgamesplayed);
+        oklahomaststealspergame = (oklahomaststeals/oklahomastgamesplayed);
+        oklahomastturnoverspergame = (oklahomastturnovers/oklahomastgamesplayed);
+        oklahomastturnoverpercentage = (100*oklahomastturnovers)/(oklahomastfga+(0.475*oklahomastfta)+oklahomastturnovers);
+        oklahomastftpercentage = (oklahomastftm/oklahomastfta)*100;
+        oklahomastreboundspergame = (oklahomastrebounds/oklahomastgamesplayed);
+        oklahomastoffreboundspergame = (oklahomastoffrebounds/oklahomastgamesplayed);
+        oklahomastdefreboundspergame = (oklahomastdefrebounds/oklahomastgamesplayed);
+        oklahomastpossessions = (0.5 * (oklahomastfga + (0.475 * oklahomastfta) - oklahomastoffrebounds + oklahomastturnovers) + 0.5 * (oklahomastoppfga + (0.475 * oklahomastoppfta) - oklahomastopporb + oklahomasttoforced));
+        oklahomastdefrating = 100*(oklahomastpointsallowed/oklahomastpossessions);
+        oklahomasteffectivefgpercentage = ((oklahomastfgm+(0.5*oklahomast3ptfgm))/oklahomastfga)*100;
+        oklahomastteamgamescore = ((oklahomastpointsscored + (0.4 * oklahomastfgm) - (0.7 * oklahomastfga) - (0.4*(oklahomastfta - oklahomastftm)) + (0.7 * oklahomastoffrebounds) + (0.3 * oklahomastdefrebounds) + oklahomaststeals + (0.7 * oklahomastassists) + (0.7 * oklahomastblocks) - (0.4 * oklahomastfouls) - oklahomastturnovers)/8)/oklahomastgamesplayed;
+        oklahomastnetrating = 100 * ((oklahomastpointsscored - oklahomastpointsallowed) / oklahomastpossessions);
+        oklahomastoffensiverating = 100 * (oklahomastpointsscored / oklahomastpossessions);
+        oklahomastpace = 40 * (oklahomastpossessions / (0.2 * oklahomastminutesplayed));
+        oklahomasttrueshootingpercentage = (oklahomastpointsscored / (2 * (oklahomastfga + 0.475 * oklahomastfta)))*100;
+        System.out.println("\nOklahoma St:\n" + oklahomastwinpercentage + "% Win Percentage\n" + oklahomastppg +
+                " Points Per Game\n"+oklahomastpapg+ " Points Allowed Per Game\n"+oklahomastfgptg+
+                "% Field Goal Percentage\n"+oklahomast2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +oklahomast3ptfgptg+"% 3 Point Field Goal Percentage\n"+oklahomastassistspergame+" Assists Per Game\n"+
+                oklahomastassistsperfgm+" Assists Per FGM\n"+ oklahomastassiststoturnoverratio+" Assists : TO Ratio\n"+
+                oklahomastblockspergame+" Blocks Per Game\n"+oklahomaststealspergame+" Steals Per Game\n"+
+                oklahomastturnoverspergame+" TO Per Game\n"+oklahomastturnoverpercentage+" TO%\n"+ oklahomastftpercentage+" FT%\n"+
+                oklahomastreboundspergame+" Rebounds Per Game\n"+oklahomastoffreboundspergame+" Offensive Rebounds Per game\n"+
+                oklahomastdefreboundspergame+" Defensive Rebounds Per Game\n"+oklahomastpossessions+" Possessions\n"+
+                oklahomastdefrating+" Defensive Rating\n"+oklahomasteffectivefgpercentage+" EFG%\n"+oklahomastteamgamescore+" Team Game Score\n"
+                +oklahomastnetrating+" Net Rating\n"+oklahomastoffensiverating+" Offensive Rating\n"+oklahomastpace+" Pace\n"+oklahomasttrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double floridastwins = 26;
+        double floridastgamesplayed = 35;
+        double floridastwinpercentage = 0;
+        double floridastpointsscored = 2873;
+        double floridastppg = 0;
+        double floridastpointsallowed = 2523;
+        double floridastpapg = 0;
+        double floridastfgm = 1036;
+        double floridastfga = 2146;
+        double floridastfgptg = 0;
+        double floridast2ptfgm = 803;
+        double floridast2ptfga = 1475;
+        double floridast2ptfgptg = 0;
+        double floridast3ptfgm = 233;
+        double floridast3ptfga = 671;
+        double floridast3ptfgptg = 0;
+        double floridastassists = 511;
+        double floridastassistspergame = 0;
+        double floridastassistsperfgm = 0;
+        double floridastassiststoturnoverratio = 0;
+        double floridastturnovers = 415;
+        double floridastturnoverspergame = 0;
+        double floridastblocks = 180;
+        double floridastblockspergame = 0;
+        double floridaststeals = 259;
+        double floridaststealspergame = 0;
+        double floridastfta = 824;
+        double floridastftm = 568;
+        double floridastturnoverpercentage = 0;
+        double floridastftpercentage = 0;
+        double floridastrebounds = 1324;
+        double floridastoffrebounds = 405;
+        double floridastdefrebounds = 919;
+        double floridastreboundspergame = 0;
+        double floridastoffreboundspergame = 0;
+        double floridastdefreboundspergame = 0;
+        double floridastpossessions = 0;
+        double floridastoppfga = 2060;
+        double floridastoppfta = 769;
+        double floridastopporb = 382;
+        double floridasttoforced = 494;
+        double floridastdefrating = 0;
+        double floridasteffectivefgpercentage = 0;
+        double floridastteamgamescore = 0;
+        double floridastfouls = 684;
+        double floridastnetrating = 0;
+        double floridastoffensiverating = 0;
+        double floridastpace = 0;
+        double floridastminutesplayed = 7000;
+        double floridasttrueshootingpercentage = 0;
+        floridastwinpercentage = (floridastwins/floridastgamesplayed)*100;
+        floridastppg = (floridastpointsscored/floridastgamesplayed);
+        floridastpapg = (floridastpointsallowed/floridastgamesplayed);
+        floridastfgptg = (floridastfgm/floridastfga)*100;
+        floridast2ptfgptg = (floridast2ptfgm/floridast2ptfga)*100;
+        floridast3ptfgptg = (floridast3ptfgm/floridast3ptfga)*100;
+        floridastassistspergame = (floridastassists/floridastgamesplayed);
+        floridastassistsperfgm = (floridastassists/floridastfgm);
+        floridastassiststoturnoverratio = (floridastassists/floridastturnovers);
+        floridastblockspergame = (floridastblocks/floridastgamesplayed);
+        floridaststealspergame = (floridaststeals/floridastgamesplayed);
+        floridastturnoverspergame = (floridastturnovers/floridastgamesplayed);
+        floridastturnoverpercentage = (100*floridastturnovers)/(floridastfga+(0.475*floridastfta)+floridastturnovers);
+        floridastftpercentage = (floridastftm/floridastfta)*100;
+        floridastreboundspergame = (floridastrebounds/floridastgamesplayed);
+        floridastoffreboundspergame = (floridastoffrebounds/floridastgamesplayed);
+        floridastdefreboundspergame = (floridastdefrebounds/floridastgamesplayed);
+        floridastpossessions = (0.5 * (floridastfga + (0.475 * floridastfta) - floridastoffrebounds + floridastturnovers) + 0.5 * (floridastoppfga + (0.475 * floridastoppfta) - floridastopporb + floridasttoforced));
+        floridastdefrating = 100*(floridastpointsallowed/floridastpossessions);
+        floridasteffectivefgpercentage = ((floridastfgm+(0.5*floridast3ptfgm))/floridastfga)*100;
+        floridastteamgamescore = ((floridastpointsscored + (0.4 * floridastfgm) - (0.7 * floridastfga) - (0.4*(floridastfta - floridastftm)) + (0.7 * floridastoffrebounds) + (0.3 * floridastdefrebounds) + floridaststeals + (0.7 * floridastassists) + (0.7 * floridastblocks) - (0.4 * floridastfouls) - floridastturnovers)/8)/floridastgamesplayed;
+        floridastnetrating = 100 * ((floridastpointsscored - floridastpointsallowed) / floridastpossessions);
+        floridastoffensiverating = 100 * (floridastpointsscored / floridastpossessions);
+        floridastpace = 40 * (floridastpossessions / (0.2 * floridastminutesplayed));
+        floridasttrueshootingpercentage = (floridastpointsscored / (2 * (floridastfga + 0.475 * floridastfta)))*100;
+        System.out.println("\nFlorida St:\n" + floridastwinpercentage + "% Win Percentage\n" + floridastppg +
+                " Points Per Game\n"+floridastpapg+ " Points Allowed Per Game\n"+floridastfgptg+
+                "% Field Goal Percentage\n"+floridast2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +floridast3ptfgptg+"% 3 Point Field Goal Percentage\n"+floridastassistspergame+" Assists Per Game\n"+
+                floridastassistsperfgm+" Assists Per FGM\n"+ floridastassiststoturnoverratio+" Assists : TO Ratio\n"+
+                floridastblockspergame+" Blocks Per Game\n"+floridaststealspergame+" Steals Per Game\n"+
+                floridastturnoverspergame+" TO Per Game\n"+floridastturnoverpercentage+" TO%\n"+ floridastftpercentage+" FT%\n"+
+                floridastreboundspergame+" Rebounds Per Game\n"+floridastoffreboundspergame+" Offensive Rebounds Per game\n"+
+                floridastdefreboundspergame+" Defensive Rebounds Per Game\n"+floridastpossessions+" Possessions\n"+
+                floridastdefrating+" Defensive Rating\n"+floridasteffectivefgpercentage+" EFG%\n"+floridastteamgamescore+" Team Game Score\n"
+                +floridastnetrating+" Net Rating\n"+floridastoffensiverating+" Offensive Rating\n"+floridastpace+" Pace\n"+floridasttrueshootingpercentage+" True Shooting Percentage");
+				
+		double michiganwins = 26;
+        double michigangamesplayed = 38;
+        double michiganwinpercentage = 0;
+        double michiganpointsscored = 2851;
+        double michiganppg = 0;
+        double michiganpointsallowed = 2523;
+        double michiganpapg = 0;
+        double michiganfgm = 1002;
+        double michiganfga = 2076;
+        double michiganfgptg = 0;
+        double michigan2ptfgm = 641;
+        double michigan2ptfga = 1139;
+        double michigan2ptfgptg = 0;
+        double michigan3ptfgm = 361;
+        double michigan3ptfga = 937;
+        double michigan3ptfgptg = 0;
+        double michiganassists = 527;
+        double michiganassistspergame = 0;
+        double michiganassistsperfgm = 0;
+        double michiganassiststoturnoverratio = 0;
+        double michiganturnovers = 349;
+        double michiganturnoverspergame = 0;
+        double michiganblocks = 108;
+        double michiganblockspergame = 0;
+        double michigansteals = 220;
+        double michiganstealspergame = 0;
+        double michiganfta = 624;
+        double michiganftm = 486;
+        double michiganturnoverpercentage = 0;
+        double michiganftpercentage = 0;
+        double michiganrebounds = 1111;
+        double michiganoffrebounds = 274;
+        double michigandefrebounds = 837;
+        double michiganreboundspergame = 0;
+        double michiganoffreboundspergame = 0;
+        double michigandefreboundspergame = 0;
+        double michiganpossessions = 0;
+        double michiganoppfga = 2060;
+        double michiganoppfta = 560;
+        double michiganopporb = 348;
+        double michigantoforced = 478;
+        double michigandefrating = 0;
+        double michiganeffectivefgpercentage = 0;
+        double michiganteamgamescore = 0;
+        double michiganfouls = 571;
+        double michigannetrating = 0;
+        double michiganoffensiverating = 0;
+        double michiganpace = 0;
+        double michiganminutesplayed = 7675;
+        double michigantrueshootingpercentage = 0;
+        michiganwinpercentage = (michiganwins/michigangamesplayed)*100;
+        michiganppg = (michiganpointsscored/michigangamesplayed);
+        michiganpapg = (michiganpointsallowed/michigangamesplayed);
+        michiganfgptg = (michiganfgm/michiganfga)*100;
+        michigan2ptfgptg = (michigan2ptfgm/michigan2ptfga)*100;
+        michigan3ptfgptg = (michigan3ptfgm/michigan3ptfga)*100;
+        michiganassistspergame = (michiganassists/michigangamesplayed);
+        michiganassistsperfgm = (michiganassists/michiganfgm);
+        michiganassiststoturnoverratio = (michiganassists/michiganturnovers);
+        michiganblockspergame = (michiganblocks/michigangamesplayed);
+        michiganstealspergame = (michigansteals/michigangamesplayed);
+        michiganturnoverspergame = (michiganturnovers/michigangamesplayed);
+        michiganturnoverpercentage = (100*michiganturnovers)/(michiganfga+(0.475*michiganfta)+michiganturnovers);
+        michiganftpercentage = (michiganftm/michiganfta)*100;
+        michiganreboundspergame = (michiganrebounds/michigangamesplayed);
+        michiganoffreboundspergame = (michiganoffrebounds/michigangamesplayed);
+        michigandefreboundspergame = (michigandefrebounds/michigangamesplayed);
+        michiganpossessions = (0.5 * (michiganfga + (0.475 * michiganfta) - michiganoffrebounds + michiganturnovers) + 0.5 * (michiganoppfga + (0.475 * michiganoppfta) - michiganopporb + michigantoforced));
+        michigandefrating = 100*(michiganpointsallowed/michiganpossessions);
+        michiganeffectivefgpercentage = ((michiganfgm+(0.5*michigan3ptfgm))/michiganfga)*100;
+        michiganteamgamescore = ((michiganpointsscored + (0.4 * michiganfgm) - (0.7 * michiganfga) - (0.4*(michiganfta - michiganftm)) + (0.7 * michiganoffrebounds) + (0.3 * michigandefrebounds) + michigansteals + (0.7 * michiganassists) + (0.7 * michiganblocks) - (0.4 * michiganfouls) - michiganturnovers)/8)/michigangamesplayed;
+        michigannetrating = 100 * ((michiganpointsscored - michiganpointsallowed) / michiganpossessions);
+        michiganoffensiverating = 100 * (michiganpointsscored / michiganpossessions);
+        michiganpace = 40 * (michiganpossessions / (0.2 * michiganminutesplayed));
+        michigantrueshootingpercentage = (michiganpointsscored / (2 * (michiganfga + 0.475 * michiganfta)))*100;
+        System.out.println("\nMichigan:\n" + michiganwinpercentage + "% Win Percentage\n" + michiganppg +
+                " Points Per Game\n"+michiganpapg+ " Points Allowed Per Game\n"+michiganfgptg+
+                "% Field Goal Percentage\n"+michigan2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +michigan3ptfgptg+"% 3 Point Field Goal Percentage\n"+michiganassistspergame+" Assists Per Game\n"+
+                michiganassistsperfgm+" Assists Per FGM\n"+ michiganassiststoturnoverratio+" Assists : TO Ratio\n"+
+                michiganblockspergame+" Blocks Per Game\n"+michiganstealspergame+" Steals Per Game\n"+
+                michiganturnoverspergame+" TO Per Game\n"+michiganturnoverpercentage+" TO%\n"+ michiganftpercentage+" FT%\n"+
+                michiganreboundspergame+" Rebounds Per Game\n"+michiganoffreboundspergame+" Offensive Rebounds Per game\n"+
+                michigandefreboundspergame+" Defensive Rebounds Per Game\n"+michiganpossessions+" Possessions\n"+
+                michigandefrating+" Defensive Rating\n"+michiganeffectivefgpercentage+" EFG%\n"+michiganteamgamescore+" Team Game Score\n"
+                +michigannetrating+" Net Rating\n"+michiganoffensiverating+" Offensive Rating\n"+michiganpace+" Pace\n"+michigantrueshootingpercentage+" True Shooting Percentage");
+				
+		double smuwins = 30;
+        double smugamesplayed = 35;
+        double smuwinpercentage = 0;
+        double smupointsscored = 2599;
+        double smuppg = 0;
+        double smupointsallowed = 2100;
+        double smupapg = 0;
+        double smufgm = 914;
+        double smufga = 1934;
+        double smufgptg = 0;
+        double smu2ptfgm = 628;
+        double smu2ptfga = 1229;
+        double smu2ptfgptg = 0;
+        double smu3ptfgm = 286;
+        double smu3ptfga = 705;
+        double smu3ptfgptg = 0;
+        double smuassists = 566;
+        double smuassistspergame = 0;
+        double smuassistsperfgm = 0;
+        double smuassiststoturnoverratio = 0;
+        double smuturnovers = 377;
+        double smuturnoverspergame = 0;
+        double smublocks = 117;
+        double smublockspergame = 0;
+        double smusteals = 200;
+        double smustealspergame = 0;
+        double smufta = 696;
+        double smuftm = 485;
+        double smuturnoverpercentage = 0;
+        double smuftpercentage = 0;
+        double smurebounds = 1335;
+        double smuoffrebounds = 416;
+        double smudefrebounds = 919;
+        double smureboundspergame = 0;
+        double smuoffreboundspergame = 0;
+        double smudefreboundspergame = 0;
+        double smupossessions = 0;
+        double smuoppfga = 1928;
+        double smuoppfta = 474;
+        double smuopporb = 329;
+        double smutoforced = 409;
+        double smudefrating = 0;
+        double smueffectivefgpercentage = 0;
+        double smuteamgamescore = 0;
+        double smufouls = 506;
+        double smunetrating = 0;
+        double smuoffensiverating = 0;
+        double smupace = 0;
+        double smuminutesplayed = 7000;
+        double smutrueshootingpercentage = 0;
+        smuwinpercentage = (smuwins/smugamesplayed)*100;
+        smuppg = (smupointsscored/smugamesplayed);
+        smupapg = (smupointsallowed/smugamesplayed);
+        smufgptg = (smufgm/smufga)*100;
+        smu2ptfgptg = (smu2ptfgm/smu2ptfga)*100;
+        smu3ptfgptg = (smu3ptfgm/smu3ptfga)*100;
+        smuassistspergame = (smuassists/smugamesplayed);
+        smuassistsperfgm = (smuassists/smufgm);
+        smuassiststoturnoverratio = (smuassists/smuturnovers);
+        smublockspergame = (smublocks/smugamesplayed);
+        smustealspergame = (smusteals/smugamesplayed);
+        smuturnoverspergame = (smuturnovers/smugamesplayed);
+        smuturnoverpercentage = (100*smuturnovers)/(smufga+(0.475*smufta)+smuturnovers);
+        smuftpercentage = (smuftm/smufta)*100;
+        smureboundspergame = (smurebounds/smugamesplayed);
+        smuoffreboundspergame = (smuoffrebounds/smugamesplayed);
+        smudefreboundspergame = (smudefrebounds/smugamesplayed);
+        smupossessions = (0.5 * (smufga + (0.475 * smufta) - smuoffrebounds + smuturnovers) + 0.5 * (smuoppfga + (0.475 * smuoppfta) - smuopporb + smutoforced));
+        smudefrating = 100*(smupointsallowed/smupossessions);
+        smueffectivefgpercentage = ((smufgm+(0.5*smu3ptfgm))/smufga)*100;
+        smuteamgamescore = ((smupointsscored + (0.4 * smufgm) - (0.7 * smufga) - (0.4*(smufta - smuftm)) + (0.7 * smuoffrebounds) + (0.3 * smudefrebounds) + smusteals + (0.7 * smuassists) + (0.7 * smublocks) - (0.4 * smufouls) - smuturnovers)/8)/smugamesplayed;
+        smunetrating = 100 * ((smupointsscored - smupointsallowed) / smupossessions);
+        smuoffensiverating = 100 * (smupointsscored / smupossessions);
+        smupace = 40 * (smupossessions / (0.2 * smuminutesplayed));
+        smutrueshootingpercentage = (smupointsscored / (2 * (smufga + 0.475 * smufta)))*100;
+        System.out.println("\nSMU:\n" + smuwinpercentage + "% Win Percentage\n" + smuppg +
+                " Points Per Game\n"+smupapg+ " Points Allowed Per Game\n"+smufgptg+
+                "% Field Goal Percentage\n"+smu2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +smu3ptfgptg+"% 3 Point Field Goal Percentage\n"+smuassistspergame+" Assists Per Game\n"+
+                smuassistsperfgm+" Assists Per FGM\n"+ smuassiststoturnoverratio+" Assists : TO Ratio\n"+
+                smublockspergame+" Blocks Per Game\n"+smustealspergame+" Steals Per Game\n"+
+                smuturnoverspergame+" TO Per Game\n"+smuturnoverpercentage+" TO%\n"+ smuftpercentage+" FT%\n"+
+                smureboundspergame+" Rebounds Per Game\n"+smuoffreboundspergame+" Offensive Rebounds Per game\n"+
+                smudefreboundspergame+" Defensive Rebounds Per Game\n"+smupossessions+" Possessions\n"+
+                smudefrating+" Defensive Rating\n"+smueffectivefgpercentage+" EFG%\n"+smuteamgamescore+" Team Game Score\n"
+                +smunetrating+" Net Rating\n"+smuoffensiverating+" Offensive Rating\n"+smupace+" Pace\n"+smutrueshootingpercentage+" True Shooting Percentage");
 
 
-
+		double cincinnatiwins = 30;
+        double cincinnatigamesplayed = 36;
+        double cincinnatiwinpercentage = 0;
+        double cincinnatipointsscored = 2674;
+        double cincinnatippg = 0;
+        double cincinnatipointsallowed = 2208;
+        double cincinnatipapg = 0;
+        double cincinnatifgm = 969;
+        double cincinnatifga = 2116;
+        double cincinnatifgptg = 0;
+        double cincinnati2ptfgm = 705;
+        double cincinnati2ptfga = 1352;
+        double cincinnati2ptfgptg = 0;
+        double cincinnati3ptfgm = 264;
+        double cincinnati3ptfga = 764;
+        double cincinnati3ptfgptg = 0;
+        double cincinnatiassists = 557;
+        double cincinnatiassistspergame = 0;
+        double cincinnatiassistsperfgm = 0;
+        double cincinnatiassiststoturnoverratio = 0;
+        double cincinnatiturnovers = 364;
+        double cincinnatiturnoverspergame = 0;
+        double cincinnatiblocks = 173;
+        double cincinnatiblockspergame = 0;
+        double cincinnatisteals = 261;
+        double cincinnatistealspergame = 0;
+        double cincinnatifta = 688;
+        double cincinnatiftm = 472;
+        double cincinnatiturnoverpercentage = 0;
+        double cincinnatiftpercentage = 0;
+        double cincinnatirebounds = 1328;
+        double cincinnatioffrebounds = 437;
+        double cincinnatidefrebounds = 891;
+        double cincinnatireboundspergame = 0;
+        double cincinnatioffreboundspergame = 0;
+        double cincinnatidefreboundspergame = 0;
+        double cincinnatipossessions = 0;
+        double cincinnatioppfga = 1974;
+        double cincinnatioppfta = 575;
+        double cincinnatiopporb = 368;
+        double cincinnatitoforced = 475;
+        double cincinnatidefrating = 0;
+        double cincinnatieffectivefgpercentage = 0;
+        double cincinnatiteamgamescore = 0;
+        double cincinnatifouls = 566;
+        double cincinnatinetrating = 0;
+        double cincinnatioffensiverating = 0;
+        double cincinnatipace = 0;
+        double cincinnatiminutesplayed = 7250;
+        double cincinnatitrueshootingpercentage = 0;
+        cincinnatiwinpercentage = (cincinnatiwins/cincinnatigamesplayed)*100;
+        cincinnatippg = (cincinnatipointsscored/cincinnatigamesplayed);
+        cincinnatipapg = (cincinnatipointsallowed/cincinnatigamesplayed);
+        cincinnatifgptg = (cincinnatifgm/cincinnatifga)*100;
+        cincinnati2ptfgptg = (cincinnati2ptfgm/cincinnati2ptfga)*100;
+        cincinnati3ptfgptg = (cincinnati3ptfgm/cincinnati3ptfga)*100;
+        cincinnatiassistspergame = (cincinnatiassists/cincinnatigamesplayed);
+        cincinnatiassistsperfgm = (cincinnatiassists/cincinnatifgm);
+        cincinnatiassiststoturnoverratio = (cincinnatiassists/cincinnatiturnovers);
+        cincinnatiblockspergame = (cincinnatiblocks/cincinnatigamesplayed);
+        cincinnatistealspergame = (cincinnatisteals/cincinnatigamesplayed);
+        cincinnatiturnoverspergame = (cincinnatiturnovers/cincinnatigamesplayed);
+        cincinnatiturnoverpercentage = (100*cincinnatiturnovers)/(cincinnatifga+(0.475*cincinnatifta)+cincinnatiturnovers);
+        cincinnatiftpercentage = (cincinnatiftm/cincinnatifta)*100;
+        cincinnatireboundspergame = (cincinnatirebounds/cincinnatigamesplayed);
+        cincinnatioffreboundspergame = (cincinnatioffrebounds/cincinnatigamesplayed);
+        cincinnatidefreboundspergame = (cincinnatidefrebounds/cincinnatigamesplayed);
+        cincinnatipossessions = (0.5 * (cincinnatifga + (0.475 * cincinnatifta) - cincinnatioffrebounds + cincinnatiturnovers) + 0.5 * (cincinnatioppfga + (0.475 * cincinnatioppfta) - cincinnatiopporb + cincinnatitoforced));
+        cincinnatidefrating = 100*(cincinnatipointsallowed/cincinnatipossessions);
+        cincinnatieffectivefgpercentage = ((cincinnatifgm+(0.5*cincinnati3ptfgm))/cincinnatifga)*100;
+        cincinnatiteamgamescore = ((cincinnatipointsscored + (0.4 * cincinnatifgm) - (0.7 * cincinnatifga) - (0.4*(cincinnatifta - cincinnatiftm)) + (0.7 * cincinnatioffrebounds) + (0.3 * cincinnatidefrebounds) + cincinnatisteals + (0.7 * cincinnatiassists) + (0.7 * cincinnatiblocks) - (0.4 * cincinnatifouls) - cincinnatiturnovers)/8)/cincinnatigamesplayed;
+        cincinnatinetrating = 100 * ((cincinnatipointsscored - cincinnatipointsallowed) / cincinnatipossessions);
+        cincinnatioffensiverating = 100 * (cincinnatipointsscored / cincinnatipossessions);
+        cincinnatipace = 40 * (cincinnatipossessions / (0.2 * cincinnatiminutesplayed));
+        cincinnatitrueshootingpercentage = (cincinnatipointsscored / (2 * (cincinnatifga + 0.475 * cincinnatifta)))*100;
+        System.out.println("\nCincinnati:\n" + cincinnatiwinpercentage + "% Win Percentage\n" + cincinnatippg +
+                " Points Per Game\n"+cincinnatipapg+ " Points Allowed Per Game\n"+cincinnatifgptg+
+                "% Field Goal Percentage\n"+cincinnati2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +cincinnati3ptfgptg+"% 3 Point Field Goal Percentage\n"+cincinnatiassistspergame+" Assists Per Game\n"+
+                cincinnatiassistsperfgm+" Assists Per FGM\n"+ cincinnatiassiststoturnoverratio+" Assists : TO Ratio\n"+
+                cincinnatiblockspergame+" Blocks Per Game\n"+cincinnatistealspergame+" Steals Per Game\n"+
+                cincinnatiturnoverspergame+" TO Per Game\n"+cincinnatiturnoverpercentage+" TO%\n"+ cincinnatiftpercentage+" FT%\n"+
+                cincinnatireboundspergame+" Rebounds Per Game\n"+cincinnatioffreboundspergame+" Offensive Rebounds Per game\n"+
+                cincinnatidefreboundspergame+" Defensive Rebounds Per Game\n"+cincinnatipossessions+" Possessions\n"+
+                cincinnatidefrating+" Defensive Rating\n"+cincinnatieffectivefgpercentage+" EFG%\n"+cincinnatiteamgamescore+" Team Game Score\n"
+                +cincinnatinetrating+" Net Rating\n"+cincinnatioffensiverating+" Offensive Rating\n"+cincinnatipace+" Pace\n"+cincinnatitrueshootingpercentage+" True Shooting Percentage");
+				
+		double arizonawins = 32;
+        double arizonagamesplayed = 37;
+        double arizonawinpercentage = 0;
+        double arizonapointsscored = 2833;
+        double arizonappg = 0;
+        double arizonapointsallowed = 2440;
+        double arizonapapg = 0;
+        double arizonafgm = 977;
+        double arizonafga = 2048;
+        double arizonafgptg = 0;
+        double arizona2ptfgm = 733;
+        double arizona2ptfga = 1423;
+        double arizona2ptfgptg = 0;
+        double arizona3ptfgm = 244;
+        double arizona3ptfga = 625;
+        double arizona3ptfgptg = 0;
+        double arizonaassists = 501;
+        double arizonaassistspergame = 0;
+        double arizonaassistsperfgm = 0;
+        double arizonaassiststoturnoverratio = 0;
+        double arizonaturnovers = 414;
+        double arizonaturnoverspergame = 0;
+        double arizonablocks = 119;
+        double arizonablockspergame = 0;
+        double arizonasteals = 201;
+        double arizonastealspergame = 0;
+        double arizonafta = 830;
+        double arizonaftm = 635;
+        double arizonaturnoverpercentage = 0;
+        double arizonaftpercentage = 0;
+        double arizonarebounds = 1358;
+        double arizonaoffrebounds = 379;
+        double arizonadefrebounds = 979;
+        double arizonareboundspergame = 0;
+        double arizonaoffreboundspergame = 0;
+        double arizonadefreboundspergame = 0;
+        double arizonapossessions = 0;
+        double arizonaoppfga = 2121;
+        double arizonaoppfta = 607;
+        double arizonaopporb = 339;
+        double arizonatoforced = 432;
+        double arizonadefrating = 0;
+        double arizonaeffectivefgpercentage = 0;
+        double arizonateamgamescore = 0;
+        double arizonafouls = 625;
+        double arizonanetrating = 0;
+        double arizonaoffensiverating = 0;
+        double arizonapace = 0;
+        double arizonaminutesplayed = 7400;
+        double arizonatrueshootingpercentage = 0;
+        arizonawinpercentage = (arizonawins/arizonagamesplayed)*100;
+        arizonappg = (arizonapointsscored/arizonagamesplayed);
+        arizonapapg = (arizonapointsallowed/arizonagamesplayed);
+        arizonafgptg = (arizonafgm/arizonafga)*100;
+        arizona2ptfgptg = (arizona2ptfgm/arizona2ptfga)*100;
+        arizona3ptfgptg = (arizona3ptfgm/arizona3ptfga)*100;
+        arizonaassistspergame = (arizonaassists/arizonagamesplayed);
+        arizonaassistsperfgm = (arizonaassists/arizonafgm);
+        arizonaassiststoturnoverratio = (arizonaassists/arizonaturnovers);
+        arizonablockspergame = (arizonablocks/arizonagamesplayed);
+        arizonastealspergame = (arizonasteals/arizonagamesplayed);
+        arizonaturnoverspergame = (arizonaturnovers/arizonagamesplayed);
+        arizonaturnoverpercentage = (100*arizonaturnovers)/(arizonafga+(0.475*arizonafta)+arizonaturnovers);
+        arizonaftpercentage = (arizonaftm/arizonafta)*100;
+        arizonareboundspergame = (arizonarebounds/arizonagamesplayed);
+        arizonaoffreboundspergame = (arizonaoffrebounds/arizonagamesplayed);
+        arizonadefreboundspergame = (arizonadefrebounds/arizonagamesplayed);
+        arizonapossessions = (0.5 * (arizonafga + (0.475 * arizonafta) - arizonaoffrebounds + arizonaturnovers) + 0.5 * (arizonaoppfga + (0.475 * arizonaoppfta) - arizonaopporb + arizonatoforced));
+        arizonadefrating = 100*(arizonapointsallowed/arizonapossessions);
+        arizonaeffectivefgpercentage = ((arizonafgm+(0.5*arizona3ptfgm))/arizonafga)*100;
+        arizonateamgamescore = ((arizonapointsscored + (0.4 * arizonafgm) - (0.7 * arizonafga) - (0.4*(arizonafta - arizonaftm)) + (0.7 * arizonaoffrebounds) + (0.3 * arizonadefrebounds) + arizonasteals + (0.7 * arizonaassists) + (0.7 * arizonablocks) - (0.4 * arizonafouls) - arizonaturnovers)/8)/arizonagamesplayed;
+        arizonanetrating = 100 * ((arizonapointsscored - arizonapointsallowed) / arizonapossessions);
+        arizonaoffensiverating = 100 * (arizonapointsscored / arizonapossessions);
+        arizonapace = 40 * (arizonapossessions / (0.2 * arizonaminutesplayed));
+        arizonatrueshootingpercentage = (arizonapointsscored / (2 * (arizonafga + 0.475 * arizonafta)))*100;
+        System.out.println("\nArizona:\n" + arizonawinpercentage + "% Win Percentage\n" + arizonappg +
+                " Points Per Game\n"+arizonapapg+ " Points Allowed Per Game\n"+arizonafgptg+
+                "% Field Goal Percentage\n"+arizona2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +arizona3ptfgptg+"% 3 Point Field Goal Percentage\n"+arizonaassistspergame+" Assists Per Game\n"+
+                arizonaassistsperfgm+" Assists Per FGM\n"+ arizonaassiststoturnoverratio+" Assists : TO Ratio\n"+
+                arizonablockspergame+" Blocks Per Game\n"+arizonastealspergame+" Steals Per Game\n"+
+                arizonaturnoverspergame+" TO Per Game\n"+arizonaturnoverpercentage+" TO%\n"+ arizonaftpercentage+" FT%\n"+
+                arizonareboundspergame+" Rebounds Per Game\n"+arizonaoffreboundspergame+" Offensive Rebounds Per game\n"+
+                arizonadefreboundspergame+" Defensive Rebounds Per Game\n"+arizonapossessions+" Possessions\n"+
+                arizonadefrating+" Defensive Rating\n"+arizonaeffectivefgpercentage+" EFG%\n"+arizonateamgamescore+" Team Game Score\n"
+                +arizonanetrating+" Net Rating\n"+arizonaoffensiverating+" Offensive Rating\n"+arizonapace+" Pace\n"+arizonatrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double notredamewins = 26;
+        double notredamegamesplayed = 36;
+        double notredamewinpercentage = 0;
+        double notredamepointsscored = 2783;
+        double notredameppg = 0;
+        double notredamepointsallowed = 2494;
+        double notredamepapg = 0;
+        double notredamefgm = 980;
+        double notredamefga = 2139;
+        double notredamefgptg = 0;
+        double notredame2ptfgm = 646;
+        double notredame2ptfga = 1270;
+        double notredame2ptfgptg = 0;
+        double notredame3ptfgm = 334;
+        double notredame3ptfga = 869;
+        double notredame3ptfgptg = 0;
+        double notredameassists = 566;
+        double notredameassistspergame = 0;
+        double notredameassistsperfgm = 0;
+        double notredameassiststoturnoverratio = 0;
+        double notredameturnovers = 342;
+        double notredameturnoverspergame = 0;
+        double notredameblocks = 134;
+        double notredameblockspergame = 0;
+        double notredamesteals = 255;
+        double notredamestealspergame = 0;
+        double notredamefta = 611;
+        double notredameftm = 489;
+        double notredameturnoverpercentage = 0;
+        double notredameftpercentage = 0;
+        double notredamerebounds = 1212;
+        double notredameoffrebounds = 327;
+        double notredamedefrebounds = 885;
+        double notredamereboundspergame = 0;
+        double notredameoffreboundspergame = 0;
+        double notredamedefreboundspergame = 0;
+        double notredamepossessions = 0;
+        double notredameoppfga = 2118;
+        double notredameoppfta = 565;
+        double notredameopporb = 387;
+        double notredametoforced = 456;
+        double notredamedefrating = 0;
+        double notredameeffectivefgpercentage = 0;
+        double notredameteamgamescore = 0;
+        double notredamefouls = 533;
+        double notredamenetrating = 0;
+        double notredameoffensiverating = 0;
+        double notredamepace = 0;
+        double notredameminutesplayed = 7225;
+        double notredametrueshootingpercentage = 0;
+        notredamewinpercentage = (notredamewins/notredamegamesplayed)*100;
+        notredameppg = (notredamepointsscored/notredamegamesplayed);
+        notredamepapg = (notredamepointsallowed/notredamegamesplayed);
+        notredamefgptg = (notredamefgm/notredamefga)*100;
+        notredame2ptfgptg = (notredame2ptfgm/notredame2ptfga)*100;
+        notredame3ptfgptg = (notredame3ptfgm/notredame3ptfga)*100;
+        notredameassistspergame = (notredameassists/notredamegamesplayed);
+        notredameassistsperfgm = (notredameassists/notredamefgm);
+        notredameassiststoturnoverratio = (notredameassists/notredameturnovers);
+        notredameblockspergame = (notredameblocks/notredamegamesplayed);
+        notredamestealspergame = (notredamesteals/notredamegamesplayed);
+        notredameturnoverspergame = (notredameturnovers/notredamegamesplayed);
+        notredameturnoverpercentage = (100*notredameturnovers)/(notredamefga+(0.475*notredamefta)+notredameturnovers);
+        notredameftpercentage = (notredameftm/notredamefta)*100;
+        notredamereboundspergame = (notredamerebounds/notredamegamesplayed);
+        notredameoffreboundspergame = (notredameoffrebounds/notredamegamesplayed);
+        notredamedefreboundspergame = (notredamedefrebounds/notredamegamesplayed);
+        notredamepossessions = (0.5 * (notredamefga + (0.475 * notredamefta) - notredameoffrebounds + notredameturnovers) + 0.5 * (notredameoppfga + (0.475 * notredameoppfta) - notredameopporb + notredametoforced));
+        notredamedefrating = 100*(notredamepointsallowed/notredamepossessions);
+        notredameeffectivefgpercentage = ((notredamefgm+(0.5*notredame3ptfgm))/notredamefga)*100;
+        notredameteamgamescore = ((notredamepointsscored + (0.4 * notredamefgm) - (0.7 * notredamefga) - (0.4*(notredamefta - notredameftm)) + (0.7 * notredameoffrebounds) + (0.3 * notredamedefrebounds) + notredamesteals + (0.7 * notredameassists) + (0.7 * notredameblocks) - (0.4 * notredamefouls) - notredameturnovers)/8)/notredamegamesplayed;
+        notredamenetrating = 100 * ((notredamepointsscored - notredamepointsallowed) / notredamepossessions);
+        notredameoffensiverating = 100 * (notredamepointsscored / notredamepossessions);
+        notredamepace = 40 * (notredamepossessions / (0.2 * notredameminutesplayed));
+        notredametrueshootingpercentage = (notredamepointsscored / (2 * (notredamefga + 0.475 * notredamefta)))*100;
+        System.out.println("\nNotre Dame:\n" + notredamewinpercentage + "% Win Percentage\n" + notredameppg +
+                " Points Per Game\n"+notredamepapg+ " Points Allowed Per Game\n"+notredamefgptg+
+                "% Field Goal Percentage\n"+notredame2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +notredame3ptfgptg+"% 3 Point Field Goal Percentage\n"+notredameassistspergame+" Assists Per Game\n"+
+                notredameassistsperfgm+" Assists Per FGM\n"+ notredameassiststoturnoverratio+" Assists : TO Ratio\n"+
+                notredameblockspergame+" Blocks Per Game\n"+notredamestealspergame+" Steals Per Game\n"+
+                notredameturnoverspergame+" TO Per Game\n"+notredameturnoverpercentage+" TO%\n"+ notredameftpercentage+" FT%\n"+
+                notredamereboundspergame+" Rebounds Per Game\n"+notredameoffreboundspergame+" Offensive Rebounds Per game\n"+
+                notredamedefreboundspergame+" Defensive Rebounds Per Game\n"+notredamepossessions+" Possessions\n"+
+                notredamedefrating+" Defensive Rating\n"+notredameeffectivefgpercentage+" EFG%\n"+notredameteamgamescore+" Team Game Score\n"
+                +notredamenetrating+" Net Rating\n"+notredameoffensiverating+" Offensive Rating\n"+notredamepace+" Pace\n"+notredametrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double butlerwins = 25;
+        double butlergamesplayed = 34;
+        double butlerwinpercentage = 0;
+        double butlerpointsscored = 2595;
+        double butlerppg = 0;
+        double butlerpointsallowed = 2341;
+        double butlerpapg = 0;
+        double butlerfgm = 906;
+        double butlerfga = 1898;
+        double butlerfgptg = 0;
+        double butler2ptfgm = 645;
+        double butler2ptfga = 1184;
+        double butler2ptfgptg = 0;
+        double butler3ptfgm = 261;
+        double butler3ptfga = 714;
+        double butler3ptfgptg = 0;
+        double butlerassists = 453;
+        double butlerassistspergame = 0;
+        double butlerassistsperfgm = 0;
+        double butlerassiststoturnoverratio = 0;
+        double butlerturnovers = 346;
+        double butlerturnoverspergame = 0;
+        double butlerblocks = 96;
+        double butlerblockspergame = 0;
+        double butlersteals = 206;
+        double butlerstealspergame = 0;
+        double butlerfta = 704;
+        double butlerftm = 522;
+        double butlerturnoverpercentage = 0;
+        double butlerftpercentage = 0;
+        double butlerrebounds = 1091;
+        double butleroffrebounds = 287;
+        double butlerdefrebounds = 804;
+        double butlerreboundspergame = 0;
+        double butleroffreboundspergame = 0;
+        double butlerdefreboundspergame = 0;
+        double butlerpossessions = 0;
+        double butleroppfga = 1837;
+        double butleroppfta = 680;
+        double butleropporb = 293;
+        double butlertoforced = 451;
+        double butlerdefrating = 0;
+        double butlereffectivefgpercentage = 0;
+        double butlerteamgamescore = 0;
+        double butlerfouls = 640;
+        double butlernetrating = 0;
+        double butleroffensiverating = 0;
+        double butlerpace = 0;
+        double butlerminutesplayed = 6850;
+        double butlertrueshootingpercentage = 0;
+        butlerwinpercentage = (butlerwins/butlergamesplayed)*100;
+        butlerppg = (butlerpointsscored/butlergamesplayed);
+        butlerpapg = (butlerpointsallowed/butlergamesplayed);
+        butlerfgptg = (butlerfgm/butlerfga)*100;
+        butler2ptfgptg = (butler2ptfgm/butler2ptfga)*100;
+        butler3ptfgptg = (butler3ptfgm/butler3ptfga)*100;
+        butlerassistspergame = (butlerassists/butlergamesplayed);
+        butlerassistsperfgm = (butlerassists/butlerfgm);
+        butlerassiststoturnoverratio = (butlerassists/butlerturnovers);
+        butlerblockspergame = (butlerblocks/butlergamesplayed);
+        butlerstealspergame = (butlersteals/butlergamesplayed);
+        butlerturnoverspergame = (butlerturnovers/butlergamesplayed);
+        butlerturnoverpercentage = (100*butlerturnovers)/(butlerfga+(0.475*butlerfta)+butlerturnovers);
+        butlerftpercentage = (butlerftm/butlerfta)*100;
+        butlerreboundspergame = (butlerrebounds/butlergamesplayed);
+        butleroffreboundspergame = (butleroffrebounds/butlergamesplayed);
+        butlerdefreboundspergame = (butlerdefrebounds/butlergamesplayed);
+        butlerpossessions = (0.5 * (butlerfga + (0.475 * butlerfta) - butleroffrebounds + butlerturnovers) + 0.5 * (butleroppfga + (0.475 * butleroppfta) - butleropporb + butlertoforced));
+        butlerdefrating = 100*(butlerpointsallowed/butlerpossessions);
+        butlereffectivefgpercentage = ((butlerfgm+(0.5*butler3ptfgm))/butlerfga)*100;
+        butlerteamgamescore = ((butlerpointsscored + (0.4 * butlerfgm) - (0.7 * butlerfga) - (0.4*(butlerfta - butlerftm)) + (0.7 * butleroffrebounds) + (0.3 * butlerdefrebounds) + butlersteals + (0.7 * butlerassists) + (0.7 * butlerblocks) - (0.4 * butlerfouls) - butlerturnovers)/8)/butlergamesplayed;
+        butlernetrating = 100 * ((butlerpointsscored - butlerpointsallowed) / butlerpossessions);
+        butleroffensiverating = 100 * (butlerpointsscored / butlerpossessions);
+        butlerpace = 40 * (butlerpossessions / (0.2 * butlerminutesplayed));
+        butlertrueshootingpercentage = (butlerpointsscored / (2 * (butlerfga + 0.475 * butlerfta)))*100;
+        System.out.println("\nButler:\n" + butlerwinpercentage + "% Win Percentage\n" + butlerppg +
+                " Points Per Game\n"+butlerpapg+ " Points Allowed Per Game\n"+butlerfgptg+
+                "% Field Goal Percentage\n"+butler2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +butler3ptfgptg+"% 3 Point Field Goal Percentage\n"+butlerassistspergame+" Assists Per Game\n"+
+                butlerassistsperfgm+" Assists Per FGM\n"+ butlerassiststoturnoverratio+" Assists : TO Ratio\n"+
+                butlerblockspergame+" Blocks Per Game\n"+butlerstealspergame+" Steals Per Game\n"+
+                butlerturnoverspergame+" TO Per Game\n"+butlerturnoverpercentage+" TO%\n"+ butlerftpercentage+" FT%\n"+
+                butlerreboundspergame+" Rebounds Per Game\n"+butleroffreboundspergame+" Offensive Rebounds Per game\n"+
+                butlerdefreboundspergame+" Defensive Rebounds Per Game\n"+butlerpossessions+" Possessions\n"+
+                butlerdefrating+" Defensive Rating\n"+butlereffectivefgpercentage+" EFG%\n"+butlerteamgamescore+" Team Game Score\n"
+                +butlernetrating+" Net Rating\n"+butleroffensiverating+" Offensive Rating\n"+butlerpace+" Pace\n"+butlertrueshootingpercentage+" True Shooting Percentage");
+				
+		double southcarolinawins = 26;
+        double southcarolinagamesplayed = 37;
+        double southcarolinawinpercentage = 0;
+        double southcarolinapointsscored = 2707;
+        double southcarolinappg = 0;
+        double southcarolinapointsallowed = 2414;
+        double southcarolinapapg = 0;
+        double southcarolinafgm = 924;
+        double southcarolinafga = 2197;
+        double southcarolinafgptg = 0;
+        double southcarolina2ptfgm = 676;
+        double southcarolina2ptfga = 1464;
+        double southcarolina2ptfgptg = 0;
+        double southcarolina3ptfgm = 248;
+        double southcarolina3ptfga = 733;
+        double southcarolina3ptfgptg = 0;
+        double southcarolinaassists = 468;
+        double southcarolinaassistspergame = 0;
+        double southcarolinaassistsperfgm = 0;
+        double southcarolinaassiststoturnoverratio = 0;
+        double southcarolinaturnovers = 480;
+        double southcarolinaturnoverspergame = 0;
+        double southcarolinablocks = 142;
+        double southcarolinablockspergame = 0;
+        double southcarolinasteals = 288;
+        double southcarolinastealspergame = 0;
+        double southcarolinafta = 874;
+        double southcarolinaftm = 611;
+        double southcarolinaturnoverpercentage = 0;
+        double southcarolinaftpercentage = 0;
+        double southcarolinarebounds = 1346;
+        double southcarolinaoffrebounds = 451;
+        double southcarolinadefrebounds = 895;
+        double southcarolinareboundspergame = 0;
+        double southcarolinaoffreboundspergame = 0;
+        double southcarolinadefreboundspergame = 0;
+        double southcarolinapossessions = 0;
+        double southcarolinaoppfga = 1969;
+        double southcarolinaoppfta = 868;
+        double southcarolinaopporb = 382;
+        double southcarolinatoforced = 632;
+        double southcarolinadefrating = 0;
+        double southcarolinaeffectivefgpercentage = 0;
+        double southcarolinateamgamescore = 0;
+        double southcarolinafouls = 751;
+        double southcarolinanetrating = 0;
+        double southcarolinaoffensiverating = 0;
+        double southcarolinapace = 0;
+        double southcarolinaminutesplayed = 7525;
+        double southcarolinatrueshootingpercentage = 0;
+        southcarolinawinpercentage = (southcarolinawins/southcarolinagamesplayed)*100;
+        southcarolinappg = (southcarolinapointsscored/southcarolinagamesplayed);
+        southcarolinapapg = (southcarolinapointsallowed/southcarolinagamesplayed);
+        southcarolinafgptg = (southcarolinafgm/southcarolinafga)*100;
+        southcarolina2ptfgptg = (southcarolina2ptfgm/southcarolina2ptfga)*100;
+        southcarolina3ptfgptg = (southcarolina3ptfgm/southcarolina3ptfga)*100;
+        southcarolinaassistspergame = (southcarolinaassists/southcarolinagamesplayed);
+        southcarolinaassistsperfgm = (southcarolinaassists/southcarolinafgm);
+        southcarolinaassiststoturnoverratio = (southcarolinaassists/southcarolinaturnovers);
+        southcarolinablockspergame = (southcarolinablocks/southcarolinagamesplayed);
+        southcarolinastealspergame = (southcarolinasteals/southcarolinagamesplayed);
+        southcarolinaturnoverspergame = (southcarolinaturnovers/southcarolinagamesplayed);
+        southcarolinaturnoverpercentage = (100*southcarolinaturnovers)/(southcarolinafga+(0.475*southcarolinafta)+southcarolinaturnovers);
+        southcarolinaftpercentage = (southcarolinaftm/southcarolinafta)*100;
+        southcarolinareboundspergame = (southcarolinarebounds/southcarolinagamesplayed);
+        southcarolinaoffreboundspergame = (southcarolinaoffrebounds/southcarolinagamesplayed);
+        southcarolinadefreboundspergame = (southcarolinadefrebounds/southcarolinagamesplayed);
+        southcarolinapossessions = (0.5 * (southcarolinafga + (0.475 * southcarolinafta) - southcarolinaoffrebounds + southcarolinaturnovers) + 0.5 * (southcarolinaoppfga + (0.475 * southcarolinaoppfta) - southcarolinaopporb + southcarolinatoforced));
+        southcarolinadefrating = 100*(southcarolinapointsallowed/southcarolinapossessions);
+        southcarolinaeffectivefgpercentage = ((southcarolinafgm+(0.5*southcarolina3ptfgm))/southcarolinafga)*100;
+        southcarolinateamgamescore = ((southcarolinapointsscored + (0.4 * southcarolinafgm) - (0.7 * southcarolinafga) - (0.4*(southcarolinafta - southcarolinaftm)) + (0.7 * southcarolinaoffrebounds) + (0.3 * southcarolinadefrebounds) + southcarolinasteals + (0.7 * southcarolinaassists) + (0.7 * southcarolinablocks) - (0.4 * southcarolinafouls) - southcarolinaturnovers)/8)/southcarolinagamesplayed;
+        southcarolinanetrating = 100 * ((southcarolinapointsscored - southcarolinapointsallowed) / southcarolinapossessions);
+        southcarolinaoffensiverating = 100 * (southcarolinapointsscored / southcarolinapossessions);
+        southcarolinapace = 40 * (southcarolinapossessions / (0.2 * southcarolinaminutesplayed));
+        southcarolinatrueshootingpercentage = (southcarolinapointsscored / (2 * (southcarolinafga + 0.475 * southcarolinafta)))*100;
+        System.out.println("\nSouth Carolina:\n" + southcarolinawinpercentage + "% Win Percentage\n" + southcarolinappg +
+                " Points Per Game\n"+southcarolinapapg+ " Points Allowed Per Game\n"+southcarolinafgptg+
+                "% Field Goal Percentage\n"+southcarolina2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +southcarolina3ptfgptg+"% 3 Point Field Goal Percentage\n"+southcarolinaassistspergame+" Assists Per Game\n"+
+                southcarolinaassistsperfgm+" Assists Per FGM\n"+ southcarolinaassiststoturnoverratio+" Assists : TO Ratio\n"+
+                southcarolinablockspergame+" Blocks Per Game\n"+southcarolinastealspergame+" Steals Per Game\n"+
+                southcarolinaturnoverspergame+" TO Per Game\n"+southcarolinaturnoverpercentage+" TO%\n"+ southcarolinaftpercentage+" FT%\n"+
+                southcarolinareboundspergame+" Rebounds Per Game\n"+southcarolinaoffreboundspergame+" Offensive Rebounds Per game\n"+
+                southcarolinadefreboundspergame+" Defensive Rebounds Per Game\n"+southcarolinapossessions+" Possessions\n"+
+                southcarolinadefrating+" Defensive Rating\n"+southcarolinaeffectivefgpercentage+" EFG%\n"+southcarolinateamgamescore+" Team Game Score\n"
+                +southcarolinanetrating+" Net Rating\n"+southcarolinaoffensiverating+" Offensive Rating\n"+southcarolinapace+" Pace\n"+southcarolinatrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double creightonwins = 25;
+        double creightongamesplayed = 35;
+        double creightonwinpercentage = 0;
+        double creightonpointsscored = 2864;
+        double creightonppg = 0;
+        double creightonpointsallowed = 2549;
+        double creightonpapg = 0;
+        double creightonfgm = 1078;
+        double creightonfga = 2137;
+        double creightonfgptg = 0;
+        double creighton2ptfgm = 774;
+        double creighton2ptfga = 1371;
+        double creighton2ptfgptg = 0;
+        double creighton3ptfgm = 304;
+        double creighton3ptfga = 766;
+        double creighton3ptfgptg = 0;
+        double creightonassists = 598;
+        double creightonassistspergame = 0;
+        double creightonassistsperfgm = 0;
+        double creightonassiststoturnoverratio = 0;
+        double creightonturnovers = 434;
+        double creightonturnoverspergame = 0;
+        double creightonblocks = 102;
+        double creightonblockspergame = 0;
+        double creightonsteals = 213;
+        double creightonstealspergame = 0;
+        double creightonfta = 592;
+        double creightonftm = 404;
+        double creightonturnoverpercentage = 0;
+        double creightonftpercentage = 0;
+        double creightonrebounds = 1223;
+        double creightonoffrebounds = 288;
+        double creightondefrebounds = 935;
+        double creightonreboundspergame = 0;
+        double creightonoffreboundspergame = 0;
+        double creightondefreboundspergame = 0;
+        double creightonpossessions = 0;
+        double creightonoppfga = 2134;
+        double creightonoppfta = 615;
+        double creightonopporb = 379;
+        double creightontoforced = 489;
+        double creightondefrating = 0;
+        double creightoneffectivefgpercentage = 0;
+        double creightonteamgamescore = 0;
+        double creightonfouls = 582;
+        double creightonnetrating = 0;
+        double creightonoffensiverating = 0;
+        double creightonpace = 0;
+        double creightonminutesplayed = 7000;
+        double creightontrueshootingpercentage = 0;
+        creightonwinpercentage = (creightonwins/creightongamesplayed)*100;
+        creightonppg = (creightonpointsscored/creightongamesplayed);
+        creightonpapg = (creightonpointsallowed/creightongamesplayed);
+        creightonfgptg = (creightonfgm/creightonfga)*100;
+        creighton2ptfgptg = (creighton2ptfgm/creighton2ptfga)*100;
+        creighton3ptfgptg = (creighton3ptfgm/creighton3ptfga)*100;
+        creightonassistspergame = (creightonassists/creightongamesplayed);
+        creightonassistsperfgm = (creightonassists/creightonfgm);
+        creightonassiststoturnoverratio = (creightonassists/creightonturnovers);
+        creightonblockspergame = (creightonblocks/creightongamesplayed);
+        creightonstealspergame = (creightonsteals/creightongamesplayed);
+        creightonturnoverspergame = (creightonturnovers/creightongamesplayed);
+        creightonturnoverpercentage = (100*creightonturnovers)/(creightonfga+(0.475*creightonfta)+creightonturnovers);
+        creightonftpercentage = (creightonftm/creightonfta)*100;
+        creightonreboundspergame = (creightonrebounds/creightongamesplayed);
+        creightonoffreboundspergame = (creightonoffrebounds/creightongamesplayed);
+        creightondefreboundspergame = (creightondefrebounds/creightongamesplayed);
+        creightonpossessions = (0.5 * (creightonfga + (0.475 * creightonfta) - creightonoffrebounds + creightonturnovers) + 0.5 * (creightonoppfga + (0.475 * creightonoppfta) - creightonopporb + creightontoforced));
+        creightondefrating = 100*(creightonpointsallowed/creightonpossessions);
+        creightoneffectivefgpercentage = ((creightonfgm+(0.5*creighton3ptfgm))/creightonfga)*100;
+        creightonteamgamescore = ((creightonpointsscored + (0.4 * creightonfgm) - (0.7 * creightonfga) - (0.4*(creightonfta - creightonftm)) + (0.7 * creightonoffrebounds) + (0.3 * creightondefrebounds) + creightonsteals + (0.7 * creightonassists) + (0.7 * creightonblocks) - (0.4 * creightonfouls) - creightonturnovers)/8)/creightongamesplayed;
+        creightonnetrating = 100 * ((creightonpointsscored - creightonpointsallowed) / creightonpossessions);
+        creightonoffensiverating = 100 * (creightonpointsscored / creightonpossessions);
+        creightonpace = 40 * (creightonpossessions / (0.2 * creightonminutesplayed));
+        creightontrueshootingpercentage = (creightonpointsscored / (2 * (creightonfga + 0.475 * creightonfta)))*100;
+        System.out.println("\nCreighton:\n" + creightonwinpercentage + "% Win Percentage\n" + creightonppg +
+                " Points Per Game\n"+creightonpapg+ " Points Allowed Per Game\n"+creightonfgptg+
+                "% Field Goal Percentage\n"+creighton2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +creighton3ptfgptg+"% 3 Point Field Goal Percentage\n"+creightonassistspergame+" Assists Per Game\n"+
+                creightonassistsperfgm+" Assists Per FGM\n"+ creightonassiststoturnoverratio+" Assists : TO Ratio\n"+
+                creightonblockspergame+" Blocks Per Game\n"+creightonstealspergame+" Steals Per Game\n"+
+                creightonturnoverspergame+" TO Per Game\n"+creightonturnoverpercentage+" TO%\n"+ creightonftpercentage+" FT%\n"+
+                creightonreboundspergame+" Rebounds Per Game\n"+creightonoffreboundspergame+" Offensive Rebounds Per game\n"+
+                creightondefreboundspergame+" Defensive Rebounds Per Game\n"+creightonpossessions+" Possessions\n"+
+                creightondefrating+" Defensive Rating\n"+creightoneffectivefgpercentage+" EFG%\n"+creightonteamgamescore+" Team Game Score\n"
+                +creightonnetrating+" Net Rating\n"+creightonoffensiverating+" Offensive Rating\n"+creightonpace+" Pace\n"+creightontrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double stmaryswins = 29;
+        double stmarysgamesplayed = 34;
+        double stmaryswinpercentage = 0;
+        double stmaryspointsscored = 2449;
+        double stmarysppg = 0;
+        double stmaryspointsallowed = 1954;
+        double stmaryspapg = 0;
+        double stmarysfgm = 892;
+        double stmarysfga = 1797;
+        double stmarysfgptg = 0;
+        double stmarys2ptfgm = 599;
+        double stmarys2ptfga = 1053;
+        double stmarys2ptfgptg = 0;
+        double stmarys3ptfgm = 293;
+        double stmarys3ptfga = 744;
+        double stmarys3ptfgptg = 0;
+        double stmarysassists = 563;
+        double stmarysassistspergame = 0;
+        double stmarysassistsperfgm = 0;
+        double stmarysassiststoturnoverratio = 0;
+        double stmarysturnovers = 365;
+        double stmarysturnoverspergame = 0;
+        double stmarysblocks = 110;
+        double stmarysblockspergame = 0;
+        double stmaryssteals = 143;
+        double stmarysstealspergame = 0;
+        double stmarysfta = 499;
+        double stmarysftm = 372;
+        double stmarysturnoverpercentage = 0;
+        double stmarysftpercentage = 0;
+        double stmarysrebounds = 1205;
+        double stmarysoffrebounds = 319;
+        double stmarysdefrebounds = 886;
+        double stmarysreboundspergame = 0;
+        double stmarysoffreboundspergame = 0;
+        double stmarysdefreboundspergame = 0;
+        double stmaryspossessions = 0;
+        double stmarysoppfga = 1792;
+        double stmarysoppfta = 476;
+        double stmarysopporb = 245;
+        double stmarystoforced = 318;
+        double stmarysdefrating = 0;
+        double stmaryseffectivefgpercentage = 0;
+        double stmarysteamgamescore = 0;
+        double stmarysfouls = 512;
+        double stmarysnetrating = 0;
+        double stmarysoffensiverating = 0;
+        double stmaryspace = 0;
+        double stmarysminutesplayed = 6800;
+        double stmarystrueshootingpercentage = 0;
+        stmaryswinpercentage = (stmaryswins/stmarysgamesplayed)*100;
+        stmarysppg = (stmaryspointsscored/stmarysgamesplayed);
+        stmaryspapg = (stmaryspointsallowed/stmarysgamesplayed);
+        stmarysfgptg = (stmarysfgm/stmarysfga)*100;
+        stmarys2ptfgptg = (stmarys2ptfgm/stmarys2ptfga)*100;
+        stmarys3ptfgptg = (stmarys3ptfgm/stmarys3ptfga)*100;
+        stmarysassistspergame = (stmarysassists/stmarysgamesplayed);
+        stmarysassistsperfgm = (stmarysassists/stmarysfgm);
+        stmarysassiststoturnoverratio = (stmarysassists/stmarysturnovers);
+        stmarysblockspergame = (stmarysblocks/stmarysgamesplayed);
+        stmarysstealspergame = (stmaryssteals/stmarysgamesplayed);
+        stmarysturnoverspergame = (stmarysturnovers/stmarysgamesplayed);
+        stmarysturnoverpercentage = (100*stmarysturnovers)/(stmarysfga+(0.475*stmarysfta)+stmarysturnovers);
+        stmarysftpercentage = (stmarysftm/stmarysfta)*100;
+        stmarysreboundspergame = (stmarysrebounds/stmarysgamesplayed);
+        stmarysoffreboundspergame = (stmarysoffrebounds/stmarysgamesplayed);
+        stmarysdefreboundspergame = (stmarysdefrebounds/stmarysgamesplayed);
+        stmaryspossessions = (0.5 * (stmarysfga + (0.475 * stmarysfta) - stmarysoffrebounds + stmarysturnovers) + 0.5 * (stmarysoppfga + (0.475 * stmarysoppfta) - stmarysopporb + stmarystoforced));
+        stmarysdefrating = 100*(stmaryspointsallowed/stmaryspossessions);
+        stmaryseffectivefgpercentage = ((stmarysfgm+(0.5*stmarys3ptfgm))/stmarysfga)*100;
+        stmarysteamgamescore = ((stmaryspointsscored + (0.4 * stmarysfgm) - (0.7 * stmarysfga) - (0.4*(stmarysfta - stmarysftm)) + (0.7 * stmarysoffrebounds) + (0.3 * stmarysdefrebounds) + stmaryssteals + (0.7 * stmarysassists) + (0.7 * stmarysblocks) - (0.4 * stmarysfouls) - stmarysturnovers)/8)/stmarysgamesplayed;
+        stmarysnetrating = 100 * ((stmaryspointsscored - stmaryspointsallowed) / stmaryspossessions);
+        stmarysoffensiverating = 100 * (stmaryspointsscored / stmaryspossessions);
+        stmaryspace = 40 * (stmaryspossessions / (0.2 * stmarysminutesplayed));
+        stmarystrueshootingpercentage = (stmaryspointsscored / (2 * (stmarysfga + 0.475 * stmarysfta)))*100;
+        System.out.println("\nSt Mary's:\n" + stmaryswinpercentage + "% Win Percentage\n" + stmarysppg +
+                " Points Per Game\n"+stmaryspapg+ " Points Allowed Per Game\n"+stmarysfgptg+
+                "% Field Goal Percentage\n"+stmarys2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +stmarys3ptfgptg+"% 3 Point Field Goal Percentage\n"+stmarysassistspergame+" Assists Per Game\n"+
+                stmarysassistsperfgm+" Assists Per FGM\n"+ stmarysassiststoturnoverratio+" Assists : TO Ratio\n"+
+                stmarysblockspergame+" Blocks Per Game\n"+stmarysstealspergame+" Steals Per Game\n"+
+                stmarysturnoverspergame+" TO Per Game\n"+stmarysturnoverpercentage+" TO%\n"+ stmarysftpercentage+" FT%\n"+
+                stmarysreboundspergame+" Rebounds Per Game\n"+stmarysoffreboundspergame+" Offensive Rebounds Per game\n"+
+                stmarysdefreboundspergame+" Defensive Rebounds Per Game\n"+stmaryspossessions+" Possessions\n"+
+                stmarysdefrating+" Defensive Rating\n"+stmaryseffectivefgpercentage+" EFG%\n"+stmarysteamgamescore+" Team Game Score\n"
+                +stmarysnetrating+" Net Rating\n"+stmarysoffensiverating+" Offensive Rating\n"+stmaryspace+" Pace\n"+stmarystrueshootingpercentage+" True Shooting Percentage");
+				
+		double tcuwins = 24;
+        double tcugamesplayed = 39;
+        double tcuwinpercentage = 0;
+        double tcupointsscored = 2914;
+        double tcuppg = 0;
+        double tcupointsallowed = 2718;
+        double tcupapg = 0;
+        double tcufgm = 1064;
+        double tcufga = 2284;
+        double tcufgptg = 0;
+        double tcu2ptfgm = 784;
+        double tcu2ptfga = 1494;
+        double tcu2ptfgptg = 0;
+        double tcu3ptfgm = 280;
+        double tcu3ptfga = 790;
+        double tcu3ptfgptg = 0;
+        double tcuassists = 661;
+        double tcuassistspergame = 0;
+        double tcuassistsperfgm = 0;
+        double tcuassiststoturnoverratio = 0;
+        double tcuturnovers = 504;
+        double tcuturnoverspergame = 0;
+        double tcublocks = 175;
+        double tcublockspergame = 0;
+        double tcusteals = 256;
+        double tcustealspergame = 0;
+        double tcufta = 738;
+        double tcuftm = 506;
+        double tcuturnoverpercentage = 0;
+        double tcuftpercentage = 0;
+        double tcurebounds = 1404;
+        double tcuoffrebounds = 453;
+        double tcudefrebounds = 951;
+        double tcureboundspergame = 0;
+        double tcuoffreboundspergame = 0;
+        double tcudefreboundspergame = 0;
+        double tcupossessions = 0;
+        double tcuoppfga = 2230;
+        double tcuoppfta = 685;
+        double tcuopporb = 392;
+        double tcutoforced = 509;
+        double tcudefrating = 0;
+        double tcueffectivefgpercentage = 0;
+        double tcuteamgamescore = 0;
+        double tcufouls = 676;
+        double tcunetrating = 0;
+        double tcuoffensiverating = 0;
+        double tcupace = 0;
+        double tcuminutesplayed = 7850;
+        double tcutrueshootingpercentage = 0;
+        tcuwinpercentage = (tcuwins/tcugamesplayed)*100;
+        tcuppg = (tcupointsscored/tcugamesplayed);
+        tcupapg = (tcupointsallowed/tcugamesplayed);
+        tcufgptg = (tcufgm/tcufga)*100;
+        tcu2ptfgptg = (tcu2ptfgm/tcu2ptfga)*100;
+        tcu3ptfgptg = (tcu3ptfgm/tcu3ptfga)*100;
+        tcuassistspergame = (tcuassists/tcugamesplayed);
+        tcuassistsperfgm = (tcuassists/tcufgm);
+        tcuassiststoturnoverratio = (tcuassists/tcuturnovers);
+        tcublockspergame = (tcublocks/tcugamesplayed);
+        tcustealspergame = (tcusteals/tcugamesplayed);
+        tcuturnoverspergame = (tcuturnovers/tcugamesplayed);
+        tcuturnoverpercentage = (100*tcuturnovers)/(tcufga+(0.475*tcufta)+tcuturnovers);
+        tcuftpercentage = (tcuftm/tcufta)*100;
+        tcureboundspergame = (tcurebounds/tcugamesplayed);
+        tcuoffreboundspergame = (tcuoffrebounds/tcugamesplayed);
+        tcudefreboundspergame = (tcudefrebounds/tcugamesplayed);
+        tcupossessions = (0.5 * (tcufga + (0.475 * tcufta) - tcuoffrebounds + tcuturnovers) + 0.5 * (tcuoppfga + (0.475 * tcuoppfta) - tcuopporb + tcutoforced));
+        tcudefrating = 100*(tcupointsallowed/tcupossessions);
+        tcueffectivefgpercentage = ((tcufgm+(0.5*tcu3ptfgm))/tcufga)*100;
+        tcuteamgamescore = ((tcupointsscored + (0.4 * tcufgm) - (0.7 * tcufga) - (0.4*(tcufta - tcuftm)) + (0.7 * tcuoffrebounds) + (0.3 * tcudefrebounds) + tcusteals + (0.7 * tcuassists) + (0.7 * tcublocks) - (0.4 * tcufouls) - tcuturnovers)/8)/tcugamesplayed;
+        tcunetrating = 100 * ((tcupointsscored - tcupointsallowed) / tcupossessions);
+        tcuoffensiverating = 100 * (tcupointsscored / tcupossessions);
+        tcupace = 40 * (tcupossessions / (0.2 * tcuminutesplayed));
+        tcutrueshootingpercentage = (tcupointsscored / (2 * (tcufga + 0.475 * tcufta)))*100;
+        System.out.println("\nTCU:\n" + tcuwinpercentage + "% Win Percentage\n" + tcuppg +
+                " Points Per Game\n"+tcupapg+ " Points Allowed Per Game\n"+tcufgptg+
+                "% Field Goal Percentage\n"+tcu2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +tcu3ptfgptg+"% 3 Point Field Goal Percentage\n"+tcuassistspergame+" Assists Per Game\n"+
+                tcuassistsperfgm+" Assists Per FGM\n"+ tcuassiststoturnoverratio+" Assists : TO Ratio\n"+
+                tcublockspergame+" Blocks Per Game\n"+tcustealspergame+" Steals Per Game\n"+
+                tcuturnoverspergame+" TO Per Game\n"+tcuturnoverpercentage+" TO%\n"+ tcuftpercentage+" FT%\n"+
+                tcureboundspergame+" Rebounds Per Game\n"+tcuoffreboundspergame+" Offensive Rebounds Per game\n"+
+                tcudefreboundspergame+" Defensive Rebounds Per Game\n"+tcupossessions+" Possessions\n"+
+                tcudefrating+" Defensive Rating\n"+tcueffectivefgpercentage+" EFG%\n"+tcuteamgamescore+" Team Game Score\n"
+                +tcunetrating+" Net Rating\n"+tcuoffensiverating+" Offensive Rating\n"+tcupace+" Pace\n"+tcutrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double marquettewins = 19;
+        double marquettegamesplayed = 32;
+        double marquettewinpercentage = 0;
+        double marquettepointsscored = 2631;
+        double marquetteppg = 0;
+        double marquettepointsallowed = 2418;
+        double marquettepapg = 0;
+        double marquettefgm = 919;
+        double marquettefga = 1888;
+        double marquettefgptg = 0;
+        double marquette2ptfgm = 583;
+        double marquette2ptfga = 1105;
+        double marquette2ptfgptg = 0;
+        double marquette3ptfgm = 336;
+        double marquette3ptfga = 783;
+        double marquette3ptfgptg = 0;
+        double marquetteassists = 525;
+        double marquetteassistspergame = 0;
+        double marquetteassistsperfgm = 0;
+        double marquetteassiststoturnoverratio = 0;
+        double marquetteturnovers = 396;
+        double marquetteturnoverspergame = 0;
+        double marquetteblocks = 115;
+        double marquetteblockspergame = 0;
+        double marquettesteals = 231;
+        double marquettestealspergame = 0;
+        double marquettefta = 585;
+        double marquetteftm = 457;
+        double marquetteturnoverpercentage = 0;
+        double marquetteftpercentage = 0;
+        double marquetterebounds = 1058;
+        double marquetteoffrebounds = 279;
+        double marquettedefrebounds = 779;
+        double marquettereboundspergame = 0;
+        double marquetteoffreboundspergame = 0;
+        double marquettedefreboundspergame = 0;
+        double marquettepossessions = 0;
+        double marquetteoppfga = 1871;
+        double marquetteoppfta = 465;
+        double marquetteopporb = 319;
+        double marquettetoforced = 418;
+        double marquettedefrating = 0;
+        double marquetteeffectivefgpercentage = 0;
+        double marquetteteamgamescore = 0;
+        double marquettefouls = 620;
+        double marquettenetrating = 0;
+        double marquetteoffensiverating = 0;
+        double marquettepace = 0;
+        double marquetteminutesplayed = 6425;
+        double marquettetrueshootingpercentage = 0;
+        marquettewinpercentage = (marquettewins/marquettegamesplayed)*100;
+        marquetteppg = (marquettepointsscored/marquettegamesplayed);
+        marquettepapg = (marquettepointsallowed/marquettegamesplayed);
+        marquettefgptg = (marquettefgm/marquettefga)*100;
+        marquette2ptfgptg = (marquette2ptfgm/marquette2ptfga)*100;
+        marquette3ptfgptg = (marquette3ptfgm/marquette3ptfga)*100;
+        marquetteassistspergame = (marquetteassists/marquettegamesplayed);
+        marquetteassistsperfgm = (marquetteassists/marquettefgm);
+        marquetteassiststoturnoverratio = (marquetteassists/marquetteturnovers);
+        marquetteblockspergame = (marquetteblocks/marquettegamesplayed);
+        marquettestealspergame = (marquettesteals/marquettegamesplayed);
+        marquetteturnoverspergame = (marquetteturnovers/marquettegamesplayed);
+        marquetteturnoverpercentage = (100*marquetteturnovers)/(marquettefga+(0.475*marquettefta)+marquetteturnovers);
+        marquetteftpercentage = (marquetteftm/marquettefta)*100;
+        marquettereboundspergame = (marquetterebounds/marquettegamesplayed);
+        marquetteoffreboundspergame = (marquetteoffrebounds/marquettegamesplayed);
+        marquettedefreboundspergame = (marquettedefrebounds/marquettegamesplayed);
+        marquettepossessions = (0.5 * (marquettefga + (0.475 * marquettefta) - marquetteoffrebounds + marquetteturnovers) + 0.5 * (marquetteoppfga + (0.475 * marquetteoppfta) - marquetteopporb + marquettetoforced));
+        marquettedefrating = 100*(marquettepointsallowed/marquettepossessions);
+        marquetteeffectivefgpercentage = ((marquettefgm+(0.5*marquette3ptfgm))/marquettefga)*100;
+        marquetteteamgamescore = ((marquettepointsscored + (0.4 * marquettefgm) - (0.7 * marquettefga) - (0.4*(marquettefta - marquetteftm)) + (0.7 * marquetteoffrebounds) + (0.3 * marquettedefrebounds) + marquettesteals + (0.7 * marquetteassists) + (0.7 * marquetteblocks) - (0.4 * marquettefouls) - marquetteturnovers)/8)/marquettegamesplayed;
+        marquettenetrating = 100 * ((marquettepointsscored - marquettepointsallowed) / marquettepossessions);
+        marquetteoffensiverating = 100 * (marquettepointsscored / marquettepossessions);
+        marquettepace = 40 * (marquettepossessions / (0.2 * marquetteminutesplayed));
+        marquettetrueshootingpercentage = (marquettepointsscored / (2 * (marquettefga + 0.475 * marquettefta)))*100;
+        System.out.println("\nMarquette:\n" + marquettewinpercentage + "% Win Percentage\n" + marquetteppg +
+                " Points Per Game\n"+marquettepapg+ " Points Allowed Per Game\n"+marquettefgptg+
+                "% Field Goal Percentage\n"+marquette2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +marquette3ptfgptg+"% 3 Point Field Goal Percentage\n"+marquetteassistspergame+" Assists Per Game\n"+
+                marquetteassistsperfgm+" Assists Per FGM\n"+ marquetteassiststoturnoverratio+" Assists : TO Ratio\n"+
+                marquetteblockspergame+" Blocks Per Game\n"+marquettestealspergame+" Steals Per Game\n"+
+                marquetteturnoverspergame+" TO Per Game\n"+marquetteturnoverpercentage+" TO%\n"+ marquetteftpercentage+" FT%\n"+
+                marquettereboundspergame+" Rebounds Per Game\n"+marquetteoffreboundspergame+" Offensive Rebounds Per game\n"+
+                marquettedefreboundspergame+" Defensive Rebounds Per Game\n"+marquettepossessions+" Possessions\n"+
+                marquettedefrating+" Defensive Rating\n"+marquetteeffectivefgpercentage+" EFG%\n"+marquetteteamgamescore+" Team Game Score\n"
+                +marquettenetrating+" Net Rating\n"+marquetteoffensiverating+" Offensive Rating\n"+marquettepace+" Pace\n"+marquettetrueshootingpercentage+" True Shooting Percentage");
+				
+		double kansasstwins = 21;
+        double kansasstgamesplayed = 35;
+        double kansasstwinpercentage = 0;
+        double kansasstpointsscored = 2523;
+        double kansasstppg = 0;
+        double kansasstpointsallowed = 2372;
+        double kansasstpapg = 0;
+        double kansasstfgm = 869;
+        double kansasstfga = 1883;
+        double kansasstfgptg = 0;
+        double kansasst2ptfgm = 622;
+        double kansasst2ptfga = 1200;
+        double kansasst2ptfgptg = 0;
+        double kansasst3ptfgm = 247;
+        double kansasst3ptfga = 683;
+        double kansasst3ptfgptg = 0;
+        double kansasstassists = 521;
+        double kansasstassistspergame = 0;
+        double kansasstassistsperfgm = 0;
+        double kansasstassiststoturnoverratio = 0;
+        double kansasstturnovers = 453;
+        double kansasstturnoverspergame = 0;
+        double kansasstblocks = 130;
+        double kansasstblockspergame = 0;
+        double kansasststeals = 271;
+        double kansasststealspergame = 0;
+        double kansasstfta = 775;
+        double kansasstftm = 538;
+        double kansasstturnoverpercentage = 0;
+        double kansasstftpercentage = 0;
+        double kansasstrebounds = 1132;
+        double kansasstoffrebounds = 327;
+        double kansasstdefrebounds = 805;
+        double kansasstreboundspergame = 0;
+        double kansasstoffreboundspergame = 0;
+        double kansasstdefreboundspergame = 0;
+        double kansasstpossessions = 0;
+        double kansasstoppfga = 1921;
+        double kansasstoppfta = 642;
+        double kansasstopporb = 382;
+        double kansassttoforced = 525;
+        double kansasstdefrating = 0;
+        double kansassteffectivefgpercentage = 0;
+        double kansasstteamgamescore = 0;
+        double kansasstfouls = 630;
+        double kansasstnetrating = 0;
+        double kansasstoffensiverating = 0;
+        double kansasstpace = 0;
+        double kansasstminutesplayed = 7025;
+        double kansassttrueshootingpercentage = 0;
+        kansasstwinpercentage = (kansasstwins/kansasstgamesplayed)*100;
+        kansasstppg = (kansasstpointsscored/kansasstgamesplayed);
+        kansasstpapg = (kansasstpointsallowed/kansasstgamesplayed);
+        kansasstfgptg = (kansasstfgm/kansasstfga)*100;
+        kansasst2ptfgptg = (kansasst2ptfgm/kansasst2ptfga)*100;
+        kansasst3ptfgptg = (kansasst3ptfgm/kansasst3ptfga)*100;
+        kansasstassistspergame = (kansasstassists/kansasstgamesplayed);
+        kansasstassistsperfgm = (kansasstassists/kansasstfgm);
+        kansasstassiststoturnoverratio = (kansasstassists/kansasstturnovers);
+        kansasstblockspergame = (kansasstblocks/kansasstgamesplayed);
+        kansasststealspergame = (kansasststeals/kansasstgamesplayed);
+        kansasstturnoverspergame = (kansasstturnovers/kansasstgamesplayed);
+        kansasstturnoverpercentage = (100*kansasstturnovers)/(kansasstfga+(0.475*kansasstfta)+kansasstturnovers);
+        kansasstftpercentage = (kansasstftm/kansasstfta)*100;
+        kansasstreboundspergame = (kansasstrebounds/kansasstgamesplayed);
+        kansasstoffreboundspergame = (kansasstoffrebounds/kansasstgamesplayed);
+        kansasstdefreboundspergame = (kansasstdefrebounds/kansasstgamesplayed);
+        kansasstpossessions = (0.5 * (kansasstfga + (0.475 * kansasstfta) - kansasstoffrebounds + kansasstturnovers) + 0.5 * (kansasstoppfga + (0.475 * kansasstoppfta) - kansasstopporb + kansassttoforced));
+        kansasstdefrating = 100*(kansasstpointsallowed/kansasstpossessions);
+        kansassteffectivefgpercentage = ((kansasstfgm+(0.5*kansasst3ptfgm))/kansasstfga)*100;
+        kansasstteamgamescore = ((kansasstpointsscored + (0.4 * kansasstfgm) - (0.7 * kansasstfga) - (0.4*(kansasstfta - kansasstftm)) + (0.7 * kansasstoffrebounds) + (0.3 * kansasstdefrebounds) + kansasststeals + (0.7 * kansasstassists) + (0.7 * kansasstblocks) - (0.4 * kansasstfouls) - kansasstturnovers)/8)/kansasstgamesplayed;
+        kansasstnetrating = 100 * ((kansasstpointsscored - kansasstpointsallowed) / kansasstpossessions);
+        kansasstoffensiverating = 100 * (kansasstpointsscored / kansasstpossessions);
+        kansasstpace = 40 * (kansasstpossessions / (0.2 * kansasstminutesplayed));
+        kansassttrueshootingpercentage = (kansasstpointsscored / (2 * (kansasstfga + 0.475 * kansasstfta)))*100;
+        System.out.println("\nKansas State:\n" + kansasstwinpercentage + "% Win Percentage\n" + kansasstppg +
+                " Points Per Game\n"+kansasstpapg+ " Points Allowed Per Game\n"+kansasstfgptg+
+                "% Field Goal Percentage\n"+kansasst2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +kansasst3ptfgptg+"% 3 Point Field Goal Percentage\n"+kansasstassistspergame+" Assists Per Game\n"+
+                kansasstassistsperfgm+" Assists Per FGM\n"+ kansasstassiststoturnoverratio+" Assists : TO Ratio\n"+
+                kansasstblockspergame+" Blocks Per Game\n"+kansasststealspergame+" Steals Per Game\n"+
+                kansasstturnoverspergame+" TO Per Game\n"+kansasstturnoverpercentage+" TO%\n"+ kansasstftpercentage+" FT%\n"+
+                kansasstreboundspergame+" Rebounds Per Game\n"+kansasstoffreboundspergame+" Offensive Rebounds Per game\n"+
+                kansasstdefreboundspergame+" Defensive Rebounds Per Game\n"+kansasstpossessions+" Possessions\n"+
+                kansasstdefrating+" Defensive Rating\n"+kansassteffectivefgpercentage+" EFG%\n"+kansasstteamgamescore+" Team Game Score\n"
+                +kansasstnetrating+" Net Rating\n"+kansasstoffensiverating+" Offensive Rating\n"+kansasstpace+" Pace\n"+kansassttrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double xavierwins = 24;
+        double xaviergamesplayed = 38;
+        double xavierwinpercentage = 0;
+        double xavierpointsscored = 2836;
+        double xavierppg = 0;
+        double xavierpointsallowed = 2711;
+        double xavierpapg = 0;
+        double xavierfgm = 981;
+        double xavierfga = 2148;
+        double xavierfgptg = 0;
+        double xavier2ptfgm = 714;
+        double xavier2ptfga = 1372;
+        double xavier2ptfgptg = 0;
+        double xavier3ptfgm = 267;
+        double xavier3ptfga = 776;
+        double xavier3ptfgptg = 0;
+        double xavierassists = 559;
+        double xavierassistspergame = 0;
+        double xavierassistsperfgm = 0;
+        double xavierassiststoturnoverratio = 0;
+        double xavierturnovers = 478;
+        double xavierturnoverspergame = 0;
+        double xavierblocks = 100;
+        double xavierblockspergame = 0;
+        double xaviersteals = 228;
+        double xavierstealspergame = 0;
+        double xavierfta = 881;
+        double xavierftm = 607;
+        double xavierturnoverpercentage = 0;
+        double xavierftpercentage = 0;
+        double xavierrebounds = 1417;
+        double xavieroffrebounds = 443;
+        double xavierdefrebounds = 974;
+        double xavierreboundspergame = 0;
+        double xavieroffreboundspergame = 0;
+        double xavierdefreboundspergame = 0;
+        double xavierpossessions = 0;
+        double xavieroppfga = 2144;
+        double xavieroppfta = 716;
+        double xavieropporb = 327;
+        double xaviertoforced = 454;
+        double xavierdefrating = 0;
+        double xaviereffectivefgpercentage = 0;
+        double xavierteamgamescore = 0;
+        double xavierfouls = 708;
+        double xaviernetrating = 0;
+        double xavieroffensiverating = 0;
+        double xavierpace = 0;
+        double xavierminutesplayed = 7625;
+        double xaviertrueshootingpercentage = 0;
+        xavierwinpercentage = (xavierwins/xaviergamesplayed)*100;
+        xavierppg = (xavierpointsscored/xaviergamesplayed);
+        xavierpapg = (xavierpointsallowed/xaviergamesplayed);
+        xavierfgptg = (xavierfgm/xavierfga)*100;
+        xavier2ptfgptg = (xavier2ptfgm/xavier2ptfga)*100;
+        xavier3ptfgptg = (xavier3ptfgm/xavier3ptfga)*100;
+        xavierassistspergame = (xavierassists/xaviergamesplayed);
+        xavierassistsperfgm = (xavierassists/xavierfgm);
+        xavierassiststoturnoverratio = (xavierassists/xavierturnovers);
+        xavierblockspergame = (xavierblocks/xaviergamesplayed);
+        xavierstealspergame = (xaviersteals/xaviergamesplayed);
+        xavierturnoverspergame = (xavierturnovers/xaviergamesplayed);
+        xavierturnoverpercentage = (100*xavierturnovers)/(xavierfga+(0.475*xavierfta)+xavierturnovers);
+        xavierftpercentage = (xavierftm/xavierfta)*100;
+        xavierreboundspergame = (xavierrebounds/xaviergamesplayed);
+        xavieroffreboundspergame = (xavieroffrebounds/xaviergamesplayed);
+        xavierdefreboundspergame = (xavierdefrebounds/xaviergamesplayed);
+        xavierpossessions = (0.5 * (xavierfga + (0.475 * xavierfta) - xavieroffrebounds + xavierturnovers) + 0.5 * (xavieroppfga + (0.475 * xavieroppfta) - xavieropporb + xaviertoforced));
+        xavierdefrating = 100*(xavierpointsallowed/xavierpossessions);
+        xaviereffectivefgpercentage = ((xavierfgm+(0.5*xavier3ptfgm))/xavierfga)*100;
+        xavierteamgamescore = ((xavierpointsscored + (0.4 * xavierfgm) - (0.7 * xavierfga) - (0.4*(xavierfta - xavierftm)) + (0.7 * xavieroffrebounds) + (0.3 * xavierdefrebounds) + xaviersteals + (0.7 * xavierassists) + (0.7 * xavierblocks) - (0.4 * xavierfouls) - xavierturnovers)/8)/xaviergamesplayed;
+        xaviernetrating = 100 * ((xavierpointsscored - xavierpointsallowed) / xavierpossessions);
+        xavieroffensiverating = 100 * (xavierpointsscored / xavierpossessions);
+        xavierpace = 40 * (xavierpossessions / (0.2 * xavierminutesplayed));
+        xaviertrueshootingpercentage = (xavierpointsscored / (2 * (xavierfga + 0.475 * xavierfta)))*100;
+        System.out.println("\nXavier:\n" + xavierwinpercentage + "% Win Percentage\n" + xavierppg +
+                " Points Per Game\n"+xavierpapg+ " Points Allowed Per Game\n"+xavierfgptg+
+                "% Field Goal Percentage\n"+xavier2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +xavier3ptfgptg+"% 3 Point Field Goal Percentage\n"+xavierassistspergame+" Assists Per Game\n"+
+                xavierassistsperfgm+" Assists Per FGM\n"+ xavierassiststoturnoverratio+" Assists : TO Ratio\n"+
+                xavierblockspergame+" Blocks Per Game\n"+xavierstealspergame+" Steals Per Game\n"+
+                xavierturnoverspergame+" TO Per Game\n"+xavierturnoverpercentage+" TO%\n"+ xavierftpercentage+" FT%\n"+
+                xavierreboundspergame+" Rebounds Per Game\n"+xavieroffreboundspergame+" Offensive Rebounds Per game\n"+
+                xavierdefreboundspergame+" Defensive Rebounds Per Game\n"+xavierpossessions+" Possessions\n"+
+                xavierdefrating+" Defensive Rating\n"+xaviereffectivefgpercentage+" EFG%\n"+xavierteamgamescore+" Team Game Score\n"
+                +xaviernetrating+" Net Rating\n"+xavieroffensiverating+" Offensive Rating\n"+xavierpace+" Pace\n"+xaviertrueshootingpercentage+" True Shooting Percentage");
+				
+		double indianawins = 18;
+        double indianagamesplayed = 34;
+        double indianawinpercentage = 0;
+        double indianapointsscored = 2711;
+        double indianappg = 0;
+        double indianapointsallowed = 2491;
+        double indianapapg = 0;
+        double indianafgm = 959;
+        double indianafga = 2004;
+        double indianafgptg = 0;
+        double indiana2ptfgm = 664;
+        double indiana2ptfga = 1228;
+        double indiana2ptfgptg = 0;
+        double indiana3ptfgm = 295;
+        double indiana3ptfga = 776;
+        double indiana3ptfgptg = 0;
+        double indianaassists = 488;
+        double indianaassistspergame = 0;
+        double indianaassistsperfgm = 0;
+        double indianaassiststoturnoverratio = 0;
+        double indianaturnovers = 517;
+        double indianaturnoverspergame = 0;
+        double indianablocks = 157;
+        double indianablockspergame = 0;
+        double indianasteals = 209;
+        double indianastealspergame = 0;
+        double indianafta = 683;
+        double indianaftm = 498;
+        double indianaturnoverpercentage = 0;
+        double indianaftpercentage = 0;
+        double indianarebounds = 1328;
+        double indianaoffrebounds = 413;
+        double indianadefrebounds = 915;
+        double indianareboundspergame = 0;
+        double indianaoffreboundspergame = 0;
+        double indianadefreboundspergame = 0;
+        double indianapossessions = 0;
+        double indianaoppfga = 2021;
+        double indianaoppfta = 743;
+        double indianaopporb = 355;
+        double indianatoforced = 379;
+        double indianadefrating = 0;
+        double indianaeffectivefgpercentage = 0;
+        double indianateamgamescore = 0;
+        double indianafouls = 682;
+        double indiananetrating = 0;
+        double indianaoffensiverating = 0;
+        double indianapace = 0;
+        double indianaminutesplayed = 6950;
+        double indianatrueshootingpercentage = 0;
+        indianawinpercentage = (indianawins/indianagamesplayed)*100;
+        indianappg = (indianapointsscored/indianagamesplayed);
+        indianapapg = (indianapointsallowed/indianagamesplayed);
+        indianafgptg = (indianafgm/indianafga)*100;
+        indiana2ptfgptg = (indiana2ptfgm/indiana2ptfga)*100;
+        indiana3ptfgptg = (indiana3ptfgm/indiana3ptfga)*100;
+        indianaassistspergame = (indianaassists/indianagamesplayed);
+        indianaassistsperfgm = (indianaassists/indianafgm);
+        indianaassiststoturnoverratio = (indianaassists/indianaturnovers);
+        indianablockspergame = (indianablocks/indianagamesplayed);
+        indianastealspergame = (indianasteals/indianagamesplayed);
+        indianaturnoverspergame = (indianaturnovers/indianagamesplayed);
+        indianaturnoverpercentage = (100*indianaturnovers)/(indianafga+(0.475*indianafta)+indianaturnovers);
+        indianaftpercentage = (indianaftm/indianafta)*100;
+        indianareboundspergame = (indianarebounds/indianagamesplayed);
+        indianaoffreboundspergame = (indianaoffrebounds/indianagamesplayed);
+        indianadefreboundspergame = (indianadefrebounds/indianagamesplayed);
+        indianapossessions = (0.5 * (indianafga + (0.475 * indianafta) - indianaoffrebounds + indianaturnovers) + 0.5 * (indianaoppfga + (0.475 * indianaoppfta) - indianaopporb + indianatoforced));
+        indianadefrating = 100*(indianapointsallowed/indianapossessions);
+        indianaeffectivefgpercentage = ((indianafgm+(0.5*indiana3ptfgm))/indianafga)*100;
+        indianateamgamescore = ((indianapointsscored + (0.4 * indianafgm) - (0.7 * indianafga) - (0.4*(indianafta - indianaftm)) + (0.7 * indianaoffrebounds) + (0.3 * indianadefrebounds) + indianasteals + (0.7 * indianaassists) + (0.7 * indianablocks) - (0.4 * indianafouls) - indianaturnovers)/8)/indianagamesplayed;
+        indiananetrating = 100 * ((indianapointsscored - indianapointsallowed) / indianapossessions);
+        indianaoffensiverating = 100 * (indianapointsscored / indianapossessions);
+        indianapace = 40 * (indianapossessions / (0.2 * indianaminutesplayed));
+        indianatrueshootingpercentage = (indianapointsscored / (2 * (indianafga + 0.475 * indianafta)))*100;
+        System.out.println("\nIndiana:\n" + indianawinpercentage + "% Win Percentage\n" + indianappg +
+                " Points Per Game\n"+indianapapg+ " Points Allowed Per Game\n"+indianafgptg+
+                "% Field Goal Percentage\n"+indiana2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +indiana3ptfgptg+"% 3 Point Field Goal Percentage\n"+indianaassistspergame+" Assists Per Game\n"+
+                indianaassistsperfgm+" Assists Per FGM\n"+ indianaassiststoturnoverratio+" Assists : TO Ratio\n"+
+                indianablockspergame+" Blocks Per Game\n"+indianastealspergame+" Steals Per Game\n"+
+                indianaturnoverspergame+" TO Per Game\n"+indianaturnoverpercentage+" TO%\n"+ indianaftpercentage+" FT%\n"+
+                indianareboundspergame+" Rebounds Per Game\n"+indianaoffreboundspergame+" Offensive Rebounds Per game\n"+
+                indianadefreboundspergame+" Defensive Rebounds Per Game\n"+indianapossessions+" Possessions\n"+
+                indianadefrating+" Defensive Rating\n"+indianaeffectivefgpercentage+" EFG%\n"+indianateamgamescore+" Team Game Score\n"
+                +indiananetrating+" Net Rating\n"+indianaoffensiverating+" Offensive Rating\n"+indianapace+" Pace\n"+indianatrueshootingpercentage+" True Shooting Percentage");
+				
+				
+		double minnesotawins = 24;
+        double minnesotagamesplayed = 34;
+        double minnesotawinpercentage = 0;
+        double minnesotapointsscored = 2556;
+        double minnesotappg = 0;
+        double minnesotapointsallowed = 2361;
+        double minnesotapapg = 0;
+        double minnesotafgm = 887;
+        double minnesotafga = 2037;
+        double minnesotafgptg = 0;
+        double minnesota2ptfgm = 678;
+        double minnesota2ptfga = 1427;
+        double minnesota2ptfgptg = 0;
+        double minnesota3ptfgm = 209;
+        double minnesota3ptfga = 610;
+        double minnesota3ptfgptg = 0;
+        double minnesotaassists = 507;
+        double minnesotaassistspergame = 0;
+        double minnesotaassistsperfgm = 0;
+        double minnesotaassiststoturnoverratio = 0;
+        double minnesotaturnovers = 393;
+        double minnesotaturnoverspergame = 0;
+        double minnesotablocks = 227;
+        double minnesotablockspergame = 0;
+        double minnesotasteals = 194;
+        double minnesotastealspergame = 0;
+        double minnesotafta = 806;
+        double minnesotaftm = 573;
+        double minnesotaturnoverpercentage = 0;
+        double minnesotaftpercentage = 0;
+        double minnesotarebounds = 1341;
+        double minnesotaoffrebounds = 377;
+        double minnesotadefrebounds = 964;
+        double minnesotareboundspergame = 0;
+        double minnesotaoffreboundspergame = 0;
+        double minnesotadefreboundspergame = 0;
+        double minnesotapossessions = 0;
+        double minnesotaoppfga = 2142;
+        double minnesotaoppfta = 626;
+        double minnesotaopporb = 415;
+        double minnesotatoforced = 429;
+        double minnesotadefrating = 0;
+        double minnesotaeffectivefgpercentage = 0;
+        double minnesotateamgamescore = 0;
+        double minnesotafouls = 577;
+        double minnesotanetrating = 0;
+        double minnesotaoffensiverating = 0;
+        double minnesotapace = 0;
+        double minnesotaminutesplayed = 6950;
+        double minnesotatrueshootingpercentage = 0;
+        minnesotawinpercentage = (minnesotawins/minnesotagamesplayed)*100;
+        minnesotappg = (minnesotapointsscored/minnesotagamesplayed);
+        minnesotapapg = (minnesotapointsallowed/minnesotagamesplayed);
+        minnesotafgptg = (minnesotafgm/minnesotafga)*100;
+        minnesota2ptfgptg = (minnesota2ptfgm/minnesota2ptfga)*100;
+        minnesota3ptfgptg = (minnesota3ptfgm/minnesota3ptfga)*100;
+        minnesotaassistspergame = (minnesotaassists/minnesotagamesplayed);
+        minnesotaassistsperfgm = (minnesotaassists/minnesotafgm);
+        minnesotaassiststoturnoverratio = (minnesotaassists/minnesotaturnovers);
+        minnesotablockspergame = (minnesotablocks/minnesotagamesplayed);
+        minnesotastealspergame = (minnesotasteals/minnesotagamesplayed);
+        minnesotaturnoverspergame = (minnesotaturnovers/minnesotagamesplayed);
+        minnesotaturnoverpercentage = (100*minnesotaturnovers)/(minnesotafga+(0.475*minnesotafta)+minnesotaturnovers);
+        minnesotaftpercentage = (minnesotaftm/minnesotafta)*100;
+        minnesotareboundspergame = (minnesotarebounds/minnesotagamesplayed);
+        minnesotaoffreboundspergame = (minnesotaoffrebounds/minnesotagamesplayed);
+        minnesotadefreboundspergame = (minnesotadefrebounds/minnesotagamesplayed);
+        minnesotapossessions = (0.5 * (minnesotafga + (0.475 * minnesotafta) - minnesotaoffrebounds + minnesotaturnovers) + 0.5 * (minnesotaoppfga + (0.475 * minnesotaoppfta) - minnesotaopporb + minnesotatoforced));
+        minnesotadefrating = 100*(minnesotapointsallowed/minnesotapossessions);
+        minnesotaeffectivefgpercentage = ((minnesotafgm+(0.5*minnesota3ptfgm))/minnesotafga)*100;
+        minnesotateamgamescore = ((minnesotapointsscored + (0.4 * minnesotafgm) - (0.7 * minnesotafga) - (0.4*(minnesotafta - minnesotaftm)) + (0.7 * minnesotaoffrebounds) + (0.3 * minnesotadefrebounds) + minnesotasteals + (0.7 * minnesotaassists) + (0.7 * minnesotablocks) - (0.4 * minnesotafouls) - minnesotaturnovers)/8)/minnesotagamesplayed;
+        minnesotanetrating = 100 * ((minnesotapointsscored - minnesotapointsallowed) / minnesotapossessions);
+        minnesotaoffensiverating = 100 * (minnesotapointsscored / minnesotapossessions);
+        minnesotapace = 40 * (minnesotapossessions / (0.2 * minnesotaminutesplayed));
+        minnesotatrueshootingpercentage = (minnesotapointsscored / (2 * (minnesotafga + 0.475 * minnesotafta)))*100;
+        System.out.println("\nMinnesota:\n" + minnesotawinpercentage + "% Win Percentage\n" + minnesotappg +
+                " Points Per Game\n"+minnesotapapg+ " Points Allowed Per Game\n"+minnesotafgptg+
+                "% Field Goal Percentage\n"+minnesota2ptfgptg+"% 2 Point Field Goal Percentage\n"
+                +minnesota3ptfgptg+"% 3 Point Field Goal Percentage\n"+minnesotaassistspergame+" Assists Per Game\n"+
+                minnesotaassistsperfgm+" Assists Per FGM\n"+ minnesotaassiststoturnoverratio+" Assists : TO Ratio\n"+
+                minnesotablockspergame+" Blocks Per Game\n"+minnesotastealspergame+" Steals Per Game\n"+
+                minnesotaturnoverspergame+" TO Per Game\n"+minnesotaturnoverpercentage+" TO%\n"+ minnesotaftpercentage+" FT%\n"+
+                minnesotareboundspergame+" Rebounds Per Game\n"+minnesotaoffreboundspergame+" Offensive Rebounds Per game\n"+
+                minnesotadefreboundspergame+" Defensive Rebounds Per Game\n"+minnesotapossessions+" Possessions\n"+
+                minnesotadefrating+" Defensive Rating\n"+minnesotaeffectivefgpercentage+" EFG%\n"+minnesotateamgamescore+" Team Game Score\n"
+                +minnesotanetrating+" Net Rating\n"+minnesotaoffensiverating+" Offensive Rating\n"+minnesotapace+" Pace\n"+minnesotatrueshootingpercentage+" True Shooting Percentage");
+				
+		
 
 
         double gonzagafinalranking = 0.0;
@@ -1331,6 +2995,25 @@ public class FinalProject
 		double virginiafinalranking = 0.0;
 		double iowastfinalranking = 0.0;
 		double purduefinalranking = 0.0;
+		double baylorfinalranking = 0.0;
+		double wisconsinfinalranking = 0.0;
+		double oklahomastfinalranking = 0.0;
+		double floridastfinalranking = 0.0;
+		double michiganfinalranking = 0.0;
+		double smufinalranking = 0.0;
+		double cincinnatifinalranking = 0.0;
+		double arizonafinalranking = 0.0;
+		double notredamefinalranking = 0.0;
+		double butlerfinalranking = 0.0;
+		double southcarolinafinalranking = 0.0;
+		double creightonfinalranking = 0.0;
+		double stmarysfinalranking = 0.0;
+		double tcufinalranking = 0.0;
+		double marquettefinalranking = 0.0;
+		double kansasstfinalranking = 0.0;
+		double xavierfinalranking = 0.0;
+		double indianafinalranking = 0.0;
+		double minnesotafinalranking = 0.0;
         double gonzagatournamentwinptg = 0.0;
         double northcarolinatournamentwinptg = 0.0;
         double westvirginiatournamentwinptg = 0.0;
@@ -1346,7 +3029,28 @@ public class FinalProject
 		double virginiatournamentwinptg = 0.0;
 		double iowasttournamentwinptg = 0.0;
 		double purduetournamentwinptg = 0.0;
-        System.out.println("Ben Marks Power Ratings");
+		double baylortournamentwinptg = 0.0;
+		double wisconsintournamentwinptg = 0.0;
+		double oklahomasttournamentwinptg = 0.0;
+		double floridasttournamentwinptg = 0.0;
+		double michigantournamentwinptg = 0.0;
+		double smutournamentwinptg = 0.0;
+		double cincinnatitournamentwinptg = 0.0;
+		double arizonatournamentwinptg = 0.0;
+		double notredametournamentwinptg = 0.0;
+		double butlertournamentwinptg = 0.0;
+		double southcarolinatournamentwinptg = 0.0;
+		double creightontournamentwinptg = 0.0;
+		double stmarystournamentwinptg = 0.0;
+		double tcutournamentwinptg = 0.0;
+		double marquettetournamentwinptg = 0.0;
+		double kansassttournamentwinptg = 0.0;
+		double xaviertournamentwinptg = 0.0;
+		double indianatournamentwinptg = 0.0;
+		double minnesotatournamentwinptg = 0.0;
+		
+		
+        System.out.println("\nBen Marks Power Ratings");
         gonzagafinalranking = ((((gonzagawinpercentage*75)*(50*(gonzagappg/gonzagapapg))*(50*gonzagafgptg)*(10*gonzagaassistsperfgm)*(20*gonzagaassiststoturnoverratio)*(gonzagablockspergame+gonzagastealspergame)*gonzagaftpercentage*(gonzagaoffensiverating+gonzagadefrating+gonzaganetrating+gonzagapace)*gonzagatrueshootingpercentage)/gonzagaturnoverpercentage)/1000000000/10000000);
         System.out.println("Gonzaga: "+gonzagafinalranking);
         northcarolinafinalranking = ((((northcarolinawinpercentage*75)*(50*(northcarolinappg/northcarolinapapg))*(50*northcarolinafgptg)*(10*northcarolinaassistsperfgm)*(20*northcarolinaassiststoturnoverratio)*(northcarolinablockspergame+northcarolinastealspergame)*northcarolinaftpercentage*(northcarolinaoffensiverating+northcarolinadefrating+northcarolinanetrating+northcarolinapace)*northcarolinatrueshootingpercentage)/northcarolinaturnoverpercentage)/1000000000/10000000);
@@ -1377,8 +3081,46 @@ public class FinalProject
         System.out.println("Iowa St: "+iowastfinalranking);
 		purduefinalranking = ((((purduewinpercentage*75)*(50*(purdueppg/purduepapg))*(50*purduefgptg)*(10*purdueassistsperfgm)*(20*purdueassiststoturnoverratio)*(purdueblockspergame+purduestealspergame)*purdueftpercentage*(purdueoffensiverating+purduedefrating+purduenetrating+purduepace)*purduetrueshootingpercentage)/purdueturnoverpercentage)/1000000000/10000000);
         System.out.println("Purdue: "+purduefinalranking);
+		baylorfinalranking = ((((baylorwinpercentage*75)*(50*(baylorppg/baylorpapg))*(50*baylorfgptg)*(10*baylorassistsperfgm)*(20*baylorassiststoturnoverratio)*(baylorblockspergame+baylorstealspergame)*baylorftpercentage*(bayloroffensiverating+baylordefrating+baylornetrating+baylorpace)*baylortrueshootingpercentage)/baylorturnoverpercentage)/1000000000/10000000);
+        System.out.println("Baylor: "+baylorfinalranking);
+		wisconsinfinalranking = ((((wisconsinwinpercentage*75)*(50*(wisconsinppg/wisconsinpapg))*(50*wisconsinfgptg)*(10*wisconsinassistsperfgm)*(20*wisconsinassiststoturnoverratio)*(wisconsinblockspergame+wisconsinstealspergame)*wisconsinftpercentage*(wisconsinoffensiverating+wisconsindefrating+wisconsinnetrating+wisconsinpace)*wisconsintrueshootingpercentage)/wisconsinturnoverpercentage)/1000000000/10000000);
+        System.out.println("Wisconsin: "+wisconsinfinalranking);
+		oklahomastfinalranking = ((((oklahomastwinpercentage*75)*(50*(oklahomastppg/oklahomastpapg))*(50*oklahomastfgptg)*(10*oklahomastassistsperfgm)*(20*oklahomastassiststoturnoverratio)*(oklahomastblockspergame+oklahomaststealspergame)*oklahomastftpercentage*(oklahomastoffensiverating+oklahomastdefrating+oklahomastnetrating+oklahomastpace)*oklahomasttrueshootingpercentage)/oklahomastturnoverpercentage)/1000000000/10000000);
+        System.out.println("Oklahoma St: "+oklahomastfinalranking);
+		floridastfinalranking = ((((floridastwinpercentage*75)*(50*(floridastppg/floridastpapg))*(50*floridastfgptg)*(10*floridastassistsperfgm)*(20*floridastassiststoturnoverratio)*(floridastblockspergame+floridaststealspergame)*floridastftpercentage*(floridastoffensiverating+floridastdefrating+floridastnetrating+floridastpace)*floridasttrueshootingpercentage)/floridastturnoverpercentage)/1000000000/10000000);
+        System.out.println("Florida St: "+floridastfinalranking);
+		michiganfinalranking = ((((michiganwinpercentage*75)*(50*(michiganppg/michiganpapg))*(50*michiganfgptg)*(10*michiganassistsperfgm)*(20*michiganassiststoturnoverratio)*(michiganblockspergame+michiganstealspergame)*michiganftpercentage*(michiganoffensiverating+michigandefrating+michigannetrating+michiganpace)*michigantrueshootingpercentage)/michiganturnoverpercentage)/1000000000/10000000);
+        System.out.println("Michigan: "+michiganfinalranking);
+		smufinalranking = ((((smuwinpercentage*75)*(50*(smuppg/smupapg))*(50*smufgptg)*(10*smuassistsperfgm)*(20*smuassiststoturnoverratio)*(smublockspergame+smustealspergame)*smuftpercentage*(smuoffensiverating+smudefrating+smunetrating+smupace)*smutrueshootingpercentage)/smuturnoverpercentage)/1000000000/10000000);
+        System.out.println("SMU: "+smufinalranking);
+		cincinnatifinalranking = ((((cincinnatiwinpercentage*75)*(50*(cincinnatippg/cincinnatipapg))*(50*cincinnatifgptg)*(10*cincinnatiassistsperfgm)*(20*cincinnatiassiststoturnoverratio)*(cincinnatiblockspergame+cincinnatistealspergame)*cincinnatiftpercentage*(cincinnatioffensiverating+cincinnatidefrating+cincinnatinetrating+cincinnatipace)*cincinnatitrueshootingpercentage)/cincinnatiturnoverpercentage)/1000000000/10000000);
+        System.out.println("Cincinnati: "+cincinnatifinalranking);
+		arizonafinalranking = ((((arizonawinpercentage*75)*(50*(arizonappg/arizonapapg))*(50*arizonafgptg)*(10*arizonaassistsperfgm)*(20*arizonaassiststoturnoverratio)*(arizonablockspergame+arizonastealspergame)*arizonaftpercentage*(arizonaoffensiverating+arizonadefrating+arizonanetrating+arizonapace)*arizonatrueshootingpercentage)/arizonaturnoverpercentage)/1000000000/10000000);
+        System.out.println("Arizona: "+arizonafinalranking);
+		notredamefinalranking = ((((notredamewinpercentage*75)*(50*(notredameppg/notredamepapg))*(50*notredamefgptg)*(10*notredameassistsperfgm)*(20*notredameassiststoturnoverratio)*(notredameblockspergame+notredamestealspergame)*notredameftpercentage*(notredameoffensiverating+notredamedefrating+notredamenetrating+notredamepace)*notredametrueshootingpercentage)/notredameturnoverpercentage)/1000000000/10000000);
+        System.out.println("Notre Dame: "+notredamefinalranking);
+		butlerfinalranking = ((((butlerwinpercentage*75)*(50*(butlerppg/butlerpapg))*(50*butlerfgptg)*(10*butlerassistsperfgm)*(20*butlerassiststoturnoverratio)*(butlerblockspergame+butlerstealspergame)*butlerftpercentage*(butleroffensiverating+butlerdefrating+butlernetrating+butlerpace)*butlertrueshootingpercentage)/butlerturnoverpercentage)/1000000000/10000000);
+        System.out.println("Butler: "+butlerfinalranking);
+		southcarolinafinalranking = ((((southcarolinawinpercentage*75)*(50*(southcarolinappg/southcarolinapapg))*(50*southcarolinafgptg)*(10*southcarolinaassistsperfgm)*(20*southcarolinaassiststoturnoverratio)*(southcarolinablockspergame+southcarolinastealspergame)*southcarolinaftpercentage*(southcarolinaoffensiverating+southcarolinadefrating+southcarolinanetrating+southcarolinapace)*southcarolinatrueshootingpercentage)/southcarolinaturnoverpercentage)/1000000000/10000000);
+        System.out.println("South Carolina: "+southcarolinafinalranking);
+		creightonfinalranking = ((((creightonwinpercentage*75)*(50*(creightonppg/creightonpapg))*(50*creightonfgptg)*(10*creightonassistsperfgm)*(20*creightonassiststoturnoverratio)*(creightonblockspergame+creightonstealspergame)*creightonftpercentage*(creightonoffensiverating+creightondefrating+creightonnetrating+creightonpace)*creightontrueshootingpercentage)/creightonturnoverpercentage)/1000000000/10000000);
+        System.out.println("Creighton: "+creightonfinalranking);
+		stmarysfinalranking = ((((stmaryswinpercentage*75)*(50*(stmarysppg/stmaryspapg))*(50*stmarysfgptg)*(10*stmarysassistsperfgm)*(20*stmarysassiststoturnoverratio)*(stmarysblockspergame+stmarysstealspergame)*stmarysftpercentage*(stmarysoffensiverating+stmarysdefrating+stmarysnetrating+stmaryspace)*stmarystrueshootingpercentage)/stmarysturnoverpercentage)/1000000000/10000000);
+        System.out.println("St Mary's: "+stmarysfinalranking);
+		tcufinalranking = ((((tcuwinpercentage*75)*(50*(tcuppg/tcupapg))*(50*tcufgptg)*(10*tcuassistsperfgm)*(20*tcuassiststoturnoverratio)*(tcublockspergame+tcustealspergame)*tcuftpercentage*(tcuoffensiverating+tcudefrating+tcunetrating+tcupace)*tcutrueshootingpercentage)/tcuturnoverpercentage)/1000000000/10000000);
+        System.out.println("TCU: "+tcufinalranking);
+		marquettefinalranking = ((((marquettewinpercentage*75)*(50*(marquetteppg/marquettepapg))*(50*marquettefgptg)*(10*marquetteassistsperfgm)*(20*marquetteassiststoturnoverratio)*(marquetteblockspergame+marquettestealspergame)*marquetteftpercentage*(marquetteoffensiverating+marquettedefrating+marquettenetrating+marquettepace)*marquettetrueshootingpercentage)/marquetteturnoverpercentage)/1000000000/10000000);
+        System.out.println("Marquette: "+marquettefinalranking);
+		kansasstfinalranking = ((((kansasstwinpercentage*75)*(50*(kansasstppg/kansasstpapg))*(50*kansasstfgptg)*(10*kansasstassistsperfgm)*(20*kansasstassiststoturnoverratio)*(kansasstblockspergame+kansasststealspergame)*kansasstftpercentage*(kansasstoffensiverating+kansasstdefrating+kansasstnetrating+kansasstpace)*kansassttrueshootingpercentage)/kansasstturnoverpercentage)/1000000000/10000000);
+        System.out.println("Kansas St: "+kansasstfinalranking);
+		xavierfinalranking = ((((xavierwinpercentage*75)*(50*(xavierppg/xavierpapg))*(50*xavierfgptg)*(10*xavierassistsperfgm)*(20*xavierassiststoturnoverratio)*(xavierblockspergame+xavierstealspergame)*xavierftpercentage*(xavieroffensiverating+xavierdefrating+xaviernetrating+xavierpace)*xaviertrueshootingpercentage)/xavierturnoverpercentage)/1000000000/10000000);
+        System.out.println("Xavier: "+xavierfinalranking);
+		indianafinalranking = ((((indianawinpercentage*75)*(50*(indianappg/indianapapg))*(50*indianafgptg)*(10*indianaassistsperfgm)*(20*indianaassiststoturnoverratio)*(indianablockspergame+indianastealspergame)*indianaftpercentage*(indianaoffensiverating+indianadefrating+indiananetrating+indianapace)*indianatrueshootingpercentage)/indianaturnoverpercentage)/1000000000/10000000);
+        System.out.println("Indiana: "+indianafinalranking);
+		minnesotafinalranking = ((((minnesotawinpercentage*75)*(50*(minnesotappg/minnesotapapg))*(50*minnesotafgptg)*(10*minnesotaassistsperfgm)*(20*minnesotaassiststoturnoverratio)*(minnesotablockspergame+minnesotastealspergame)*minnesotaftpercentage*(minnesotaoffensiverating+minnesotadefrating+minnesotanetrating+minnesotapace)*minnesotatrueshootingpercentage)/minnesotaturnoverpercentage)/1000000000/10000000);
+        System.out.println("Minnesota: "+minnesotafinalranking);
 
-        double totalrankings = gonzagafinalranking + northcarolinafinalranking + westvirginiafinalranking + kentuckyfinalranking + villanovafinalranking + kansasfinalranking + louisvillefinalranking + floridafinalranking + dukefinalranking + wichitastfinalranking + oregonfinalranking + uclafinalranking + virginiafinalranking + iowastfinalranking + purduefinalranking;
+        double totalrankings = gonzagafinalranking + northcarolinafinalranking + westvirginiafinalranking + kentuckyfinalranking + villanovafinalranking + kansasfinalranking + louisvillefinalranking + floridafinalranking + dukefinalranking + wichitastfinalranking + oregonfinalranking + uclafinalranking + virginiafinalranking + iowastfinalranking + purduefinalranking + baylorfinalranking + wisconsinfinalranking + oklahomastfinalranking + floridastfinalranking + michiganfinalranking + smufinalranking + cincinnatifinalranking + arizonafinalranking + notredamefinalranking + butlerfinalranking + southcarolinafinalranking + creightonfinalranking + stmarysfinalranking + tcufinalranking + marquettefinalranking + kansasstfinalranking + xavierfinalranking + indianafinalranking + minnesotafinalranking;
         System.out.println("\nNCAA Tournament Title Percent Chance: ");
         gonzagatournamentwinptg = (100*(gonzagafinalranking/totalrankings));
         System.out.println("Gonzaga: "+gonzagatournamentwinptg);
@@ -1410,6 +3152,45 @@ public class FinalProject
         System.out.println("Iowa St: "+iowasttournamentwinptg);
 		purduetournamentwinptg = (100*(purduefinalranking/totalrankings));
         System.out.println("Purdue: "+purduetournamentwinptg);
+		baylortournamentwinptg = (100*(baylorfinalranking/totalrankings));
+        System.out.println("Baylor: "+baylortournamentwinptg);
+		wisconsintournamentwinptg = (100*(wisconsinfinalranking/totalrankings));
+        System.out.println("Wisconsin: "+wisconsintournamentwinptg);
+		oklahomasttournamentwinptg = (100*(oklahomastfinalranking/totalrankings));
+        System.out.println("Oklahoma St: "+oklahomasttournamentwinptg);
+		floridasttournamentwinptg = (100*(floridastfinalranking/totalrankings));
+        System.out.println("Florida St: "+floridasttournamentwinptg);
+		michigantournamentwinptg = (100*(michiganfinalranking/totalrankings));
+        System.out.println("Michigan: "+michigantournamentwinptg);
+		smutournamentwinptg = (100*(smufinalranking/totalrankings));
+        System.out.println("SMU: "+smutournamentwinptg);
+		cincinnatitournamentwinptg = (100*(cincinnatifinalranking/totalrankings));
+        System.out.println("Cincinnati: "+cincinnatitournamentwinptg);
+		arizonatournamentwinptg = (100*(arizonafinalranking/totalrankings));
+        System.out.println("Arizona: "+arizonatournamentwinptg);
+		notredametournamentwinptg = (100*(notredamefinalranking/totalrankings));
+        System.out.println("Notre Dame: "+notredametournamentwinptg);
+		butlertournamentwinptg = (100*(butlerfinalranking/totalrankings));
+        System.out.println("Butler: "+butlertournamentwinptg);
+		southcarolinatournamentwinptg = (100*(southcarolinafinalranking/totalrankings));
+        System.out.println("South Carolina: "+southcarolinatournamentwinptg);
+		creightontournamentwinptg = (100*(creightonfinalranking/totalrankings));
+        System.out.println("Creighton: "+creightontournamentwinptg);
+		stmarystournamentwinptg = (100*(stmarysfinalranking/totalrankings));
+        System.out.println("St Mary's: "+stmarystournamentwinptg);
+		tcutournamentwinptg = (100*(tcufinalranking/totalrankings));
+        System.out.println("TCU: "+tcutournamentwinptg);
+		marquettetournamentwinptg = (100*(marquettefinalranking/totalrankings));
+        System.out.println("Marquette: "+marquettetournamentwinptg);
+		kansassttournamentwinptg = (100*(kansasstfinalranking/totalrankings));
+        System.out.println("Kansas St: "+kansassttournamentwinptg);
+		xaviertournamentwinptg = (100*(xavierfinalranking/totalrankings));
+        System.out.println("Xavier: "+xaviertournamentwinptg);
+		indianatournamentwinptg = (100*(indianafinalranking/totalrankings));
+        System.out.println("Indiana: "+indianatournamentwinptg);
+		minnesotatournamentwinptg = (100*(minnesotafinalranking/totalrankings));
+        System.out.println("Minnesota: "+minnesotatournamentwinptg);
+		
     }
 }
 /*
