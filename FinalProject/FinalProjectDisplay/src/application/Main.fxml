@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="476.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/gonzaga-logo.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="gonzaga" editable="false" layoutX="522.0" layoutY="29.0" onDragDetected="#generateRandom" prefHeight="55.0" prefWidth="594.0" text="2016-2017 NCAA Tournament Winning Percentages based on Ben Marks Power Index">
+         <font>
+            <Font size="15.0" />
+         </font></TextArea>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="463.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Wisconsin_Badgers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="462.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/0c409bef7c2e0b51cbcd52aa3d65e1e3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="351.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/2000px-Wake_Forest_University_Athletic_logo.svg_.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="353.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/29cbf709e677dd55ca77c4f4cff28c3a.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="574.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Alabama_Crimson_Tide_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="243.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Arkansas_Razorbacks_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="249.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Baylor_Athletics_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="576.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/California_Golden_Bears_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="244.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Butler_Bulldogs_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="462.0" layoutY="528.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Creighton_Bluejays_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="244.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Dayton_Flyers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="351.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/dfc10be55c0d1e25bc3da77a56e5b6ab.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="352.0" layoutY="651.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/download.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="239.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Duke_text_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="573.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/duPyG0WD.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="571.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Florida_Gators_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="576.0" layoutY="647.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/FSU_Seminoles.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="681.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/georgetown.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="458.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Houston_Cougars_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="356.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/i.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="684.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Illinois_Fighting_Illini_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="791.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Indiana_Hoosiers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="682.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Iowa_Hawkeyes_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="788.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Iowa_State_Cyclones_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="681.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Kentucky_Wildcats_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1359.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Louisville_Cardinals_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1364.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Marquette_Golden_Eagles.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="135.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Maryland_Terrapins_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="790.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Miami_Hurricanes_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="680.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Michigan_Wolverines_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1489.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Middle_Tennessee_Athletics_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="791.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Minnesota_Golden_Gophers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1355.0" layoutY="662.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/North_Carolina_Tar_Heels_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1225.0" layoutY="658.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Northwestern_wildcats_CMKY_80_100_0_0.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="132.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Notre_Dame_Fighting_Irish_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="792.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Ohio_State_Buckeyes_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1491.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/OiQ9RXnB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1486.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Oklahoma_Sooners_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1231.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Oklahoma_State_University_Athletics_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1364.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/ole_miss_rebels.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1362.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Oregon_Ducks_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/photo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1488.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/preview-Kansas_State_Wildcats.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1485.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Purdue_Boilermakers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1227.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Rhode_Island_Rams_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1228.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Seton_Hall_Pirates_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1234.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/South_Carolina_Gamecocks_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="135.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/spartan_png.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="907.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/St_mary_gaels_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="903.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/TCU_Athletics_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="901.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Tennessee_Volunteers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="900.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Texas_A&amp;M_University_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="23.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Texas_Tech_Red_Raiders_Logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="901.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/UCLA_Bruins_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1122.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/UGA.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="136.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/University_of_Arizona_Block_A.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1121.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/University_of_Kansas_Jayhawk_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1119.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Utah_Utes_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1008.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Vanderbilt_Commodores_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1006.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/VCU_Rams.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1006.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Villanova_Wildcats_Logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1013.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Virginia_Tech_Hokies_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1003.0" layoutY="664.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Watch-Syracuse-Orange-Online.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="134.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/West_Virginia_Flying_WV_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1121.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Wichita_State_Shockers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1118.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/WJGYXIOSHUETHFA.20140730084232.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="31.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/Xavier_Musketeers_logo.svg.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="gonzaga1" editable="false" layoutX="446.0" layoutY="226.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="        Gonzaga:&#10;3.177458693346506">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11" editable="false" layoutX="228.0" layoutY="345.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="110.0" text="         Baylor:&#10;1.3206090591769442">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111" editable="false" layoutX="227.0" layoutY="476.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="        Dayton:&#10;1.965640677765875">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111" editable="false" layoutX="226.0" layoutY="607.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="           Butler:&#10;3.177458693346506">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111" editable="false" layoutX="1331.0" layoutY="743.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="    North Carolina:&#10;2.625978813403393">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111111" editable="false" layoutX="1107.0" layoutY="623.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="        Clemson:&#10;0.8611938056369762">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111112" editable="false" layoutX="988.0" layoutY="621.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="118.0" text="     Virginia Tech:&#10;0.9401678130596727">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111113" editable="false" layoutX="881.0" layoutY="608.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="     Texas A&amp;M:&#10;0.7172281551432836">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111114" editable="false" layoutX="777.0" layoutY="609.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="      Iowa State:&#10;2.213293080739207">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111115" editable="false" layoutX="672.0" layoutY="609.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="        Kentucky:&#10;2.229736224381628">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111116" editable="false" layoutX="561.0" layoutY="600.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="112.0" text="         Florida:&#10;1.3045770645136303">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111117" editable="false" layoutX="447.0" layoutY="605.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="112.0" text="      Creighton:&#10;1.5095628873846876">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111118" editable="false" layoutX="336.0" layoutY="604.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="    Illinois State:&#10;1.2653696474165634">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga111119" editable="false" layoutX="332.0" layoutY="733.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="         Virginia:&#10;1.5618126311126852">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111110" editable="false" layoutX="437.0" layoutY="735.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="        Houston:&#10;1.1049390379588313">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111111" editable="false" layoutX="555.0" layoutY="735.0" onDragDetected="#generateRandom" prefHeight="50.0" prefWidth="108.0" text="     Florida State:&#10;1.7696482944577623">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111112" editable="false" layoutX="666.0" layoutY="733.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="     Georgetown:&#10;0.578609531948872">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111113" editable="false" layoutX="766.0" layoutY="737.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="112.0" text="       Minnesota:&#10;1.5654749174939808">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111114" editable="false" layoutX="880.0" layoutY="742.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="           UCLA:&#10;5.400595733009932">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111115" editable="false" layoutX="1469.0" layoutY="747.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="122.0" text="  Middle Tennessee:&#10;2.1806211588991067">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111116" editable="false" layoutX="986.0" layoutY="744.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="         Syracuse:&#10;1.4280063300620016">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111117" editable="false" layoutX="1093.0" layoutY="736.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="118.0" text="        Georgia:&#10;0.5225779567625876">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111118" editable="false" layoutX="1209.0" layoutY="737.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="    Northwestern:&#10;1.4754365532038614">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111119" editable="false" layoutX="336.0" layoutY="342.0" onDragDetected="#generateRandom" prefHeight="52.0" prefWidth="108.0" text="      Providence:&#10;0.8010032835912679">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111120" editable="false" layoutX="331.0" layoutY="481.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="       Cincinnati:&#10;2.838573335826856">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111121" editable="false" layoutX="439.0" layoutY="486.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="           USC:&#10;2.062009239635619">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111122" editable="false" layoutX="545.0" layoutY="480.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="        California:&#10;0.5018237548725513">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111123" editable="false" layoutX="657.0" layoutY="489.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="           Iowa:&#10;1.098897194445828">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111124" editable="false" layoutX="763.0" layoutY="490.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="116.0" text="         Indiana:&#10;0.6717769793652799">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111125" editable="false" layoutX="880.0" layoutY="490.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="      Tennessee:&#10;0.638209128642645">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111126" editable="false" layoutX="985.0" layoutY="494.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="114.0" text="        Villanova:&#10;2.4169553491994566">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111127" editable="false" layoutX="1465.0" layoutY="493.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="         Purdue:&#10;1.7074528518547005">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111128" editable="false" layoutX="1339.0" layoutY="499.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="114.0" text="       Marquette:&#10;1.6534240949454155">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111129" editable="false" layoutX="1222.0" layoutY="493.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="116.0" text="       Seton Hall:&#10;0.4609849504209451">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111130" editable="false" layoutX="1100.0" layoutY="500.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="116.0" text="           Utah:&#10;0.9375671961150744">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111131" editable="false" layoutX="1217.0" layoutY="615.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="110.0" text="      Rhode Island:&#10;1.3752950813388614">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111132" editable="false" layoutX="1451.0" layoutY="617.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="120.0" text="       Oklahoma:&#10;0.23289193656137627">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111133" editable="false" layoutX="1329.0" layoutY="611.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="116.0" text="      Louisville:&#10;1.5921177711518182">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111134" editable="false" layoutX="668.0" layoutY="232.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="          Illinois:&#10;0.5410181100238054">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111135" editable="false" layoutX="550.0" layoutY="227.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="114.0" text="        Alabama:&#10;0.35722145238649566">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111136" editable="false" layoutX="1475.0" layoutY="363.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="114.0" text="         Texas:&#10;0.20509503644579766">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111137" editable="false" layoutX="1349.0" layoutY="366.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="        Ole Miss:&#10;0.6321391867491756">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111138" editable="false" layoutX="1217.0" layoutY="367.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="   Oklahoma State:&#10;1.2083216908932433">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111139" editable="false" layoutX="1097.0" layoutY="364.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="          Kansas:&#10;2.1124919266964812">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111140" editable="false" layoutX="990.0" layoutY="363.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="            VCU:&#10;1.4186855828341667">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111141" editable="false" layoutX="882.0" layoutY="367.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="            TCU:&#10;1.2813245771052422">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111142" editable="false" layoutX="769.0" layoutY="368.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="          Miami:&#10;0.6326182491950126">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111143" editable="false" layoutX="664.0" layoutY="351.0" onDragDetected="#generateRandom" prefHeight="50.0" prefWidth="110.0" text="        Michigan:&#10;1.8987539519139796">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111144" editable="false" layoutX="559.0" layoutY="347.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="         Nevada:&#10;2.0218058826592804">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111145" editable="false" layoutX="444.0" layoutY="347.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="110.0" text="       Wisconsin:&#10;1.2138427749667489">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111146" editable="false" layoutX="117.0" layoutY="608.0" onDragDetected="#generateRandom" prefHeight="48.0" prefWidth="108.0" text="       Notre Dame:&#10;2.8673488347742246">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111147" editable="false" layoutX="113.0" layoutY="729.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="       Maryland:&#10;1.054188761815675">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111148" editable="false" layoutX="221.0" layoutY="729.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="          Duke:&#10;1.5870898465546415">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111149" editable="false" layoutX="1468.0" layoutY="227.0" onDragDetected="#generateRandom" prefHeight="52.0" prefWidth="110.0" text="    Kansas State:&#10;1.0387098812642885">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111150" editable="false" layoutX="1340.0" layoutY="232.0" onDragDetected="#generateRandom" prefHeight="50.0" prefWidth="108.0" text="        Oregon:&#10;2.7446165559122204">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111151" editable="false" layoutX="1212.0" layoutY="231.0" onDragDetected="#generateRandom" prefHeight="52.0" prefWidth="122.0" text="    South Carolina:&#10;0.8387119233367885">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111152" editable="false" layoutX="1096.0" layoutY="227.0" onDragDetected="#generateRandom" prefHeight="52.0" prefWidth="116.0" text="     Wichita State:&#10;2.9590166183943443">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111153" editable="false" layoutX="990.0" layoutY="231.0" onDragDetected="#generateRandom" prefHeight="50.0" prefWidth="110.0" text="       Vanderbilt:&#10;0.5774453084594493">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111154" editable="false" layoutX="887.0" layoutY="233.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="    Saint Mary's:&#10;2.304286154801492">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga1111155" editable="false" layoutX="778.0" layoutY="231.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="110.0" text="       Ohio State:&#10;0.5342981554690917">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga112" editable="false" layoutX="334.0" layoutY="225.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="      Wake Forest:&#10;1.2855053546511228">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga113" editable="false" layoutX="224.0" layoutY="224.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="112.0" text="        Arkansas:&#10;1.5319136407328307">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111461" editable="false" layoutX="115.0" layoutY="480.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="114.0" text="    Michigan State:&#10;0.7929059280057358">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111462" editable="false" layoutX="116.0" layoutY="347.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="110.0" text="        Arizona:&#10;1.5922393527595804">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111463" editable="false" layoutX="118.0" layoutY="217.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="110.0" text="    West Virginia:&#10;2.5412779519502338">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111464" editable="false" layoutX="10.0" layoutY="481.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="      Texas Tech:&#10;0.827047724244426">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111465" editable="false" layoutX="6.0" layoutY="220.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="108.0" text="         Xavier:&#10;0.8256890928361081">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="gonzaga11111466" editable="false" layoutX="8.0" layoutY="347.0" onDragDetected="#generateRandom" prefHeight="40.0" prefWidth="106.0" text="          SMU:&#10;2.408959891568031">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
